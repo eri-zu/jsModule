@@ -3,6 +3,7 @@
 // ************************************************************ -->
 <div class="wrap">
   <div class="message">Please scroll.</div>
+  <% for (let i = 0; i < 3; i++) { %>
   <div class="section section01">
     <div class="imgs">
       <div class="img-item">
@@ -12,82 +13,15 @@
   </div>
   <div class="section section02">
     <div class="imgs js-bounce_item -child">
+      <% for (let j = 0; j < 3; j++) {%>
       <div class="img-item">
         <img
           class="js-bounce_item_child"
           src="./assets/resource/img/img02.png"
         />
       </div>
-      <div class="img-item">
-        <img
-          class="js-bounce_item_child"
-          src="./assets/resource/img/img02.png"
-        />
-      </div>
-      <div class="img-item">
-        <img
-          class="js-bounce_item_child"
-          src="./assets/resource/img/img02.png"
-        />
-      </div>
+      <% } %>
     </div>
   </div>
-  <div class="section section03">
-    <div class="imgs">
-      <div class="img-item">
-        <img class="js-bounce_item" src="./assets/resource/img/img01.png" />
-      </div>
-    </div>
-  </div>
-  <div class="section section04">
-    <div class="imgs js-bounce_item -child">
-      <div class="img-item">
-        <img
-          class="js-bounce_item_child"
-          src="./assets/resource/img/img02.png"
-        />
-      </div>
-      <div class="img-item">
-        <img
-          class="js-bounce_item_child"
-          src="./assets/resource/img/img02.png"
-        />
-      </div>
-      <div class="img-item">
-        <img
-          class="js-bounce_item_child"
-          src="./assets/resource/img/img02.png"
-        />
-      </div>
-    </div>
-  </div>
-  <div class="section section05">
-    <div class="imgs">
-      <div class="img-item">
-        <img class="js-bounce_item" src="./assets/resource/img/img01.png" />
-      </div>
-    </div>
-  </div>
-  <div class="section section06">
-    <div class="imgs js-bounce_item -child">
-      <div class="img-item">
-        <img
-          class="js-bounce_item_child"
-          src="./assets/resource/img/img02.png"
-        />
-      </div>
-      <div class="img-item">
-        <img
-          class="js-bounce_item_child"
-          src="./assets/resource/img/img02.png"
-        />
-      </div>
-      <div class="img-item">
-        <img
-          class="js-bounce_item_child"
-          src="./assets/resource/img/img02.png"
-        />
-      </div>
-    </div>
-  </div>
+  <% }%>
 </div>
