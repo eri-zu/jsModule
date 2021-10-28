@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+/* --------------------------------------------------------------------------------
+*
+*   section01
+*
+-------------------------------------------------------------------------------- */
+.wrap {
+  padding: 50px;
+
+  @include max(768) {
+    padding: 30px;
+  }
+}
+.message {
+  text-align: center;
+}
+
+.imgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include max(768) {
+    flex-direction: column;
+  }
+}
+
+.section {
+  &:nth-child(n + 2) {
+    margin-top: 150px;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.section02,
+.section04,
+.section06 {
+  .img-item {
+    &:nth-child(n + 2) {
+      margin-left: 30px;
+
+      @include max(768) {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+  }
+}
