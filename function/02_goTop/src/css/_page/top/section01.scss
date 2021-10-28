@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+/* --------------------------------------------------------------------------------
+*
+*   section01
+*
+-------------------------------------------------------------------------------- */
+.section {
+  height: 500vh;
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 20px;
+  }
+}
