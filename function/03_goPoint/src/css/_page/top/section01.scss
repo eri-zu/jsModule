@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+/* --------------------------------------------------------------------------------
+*
+*   section01
+*
+-------------------------------------------------------------------------------- */
+.section {
+  height: 200vh;
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  position: relative;
+
+  &.section01 {
+    background-color: #cee5d0;
+  }
+
+  &.section02 {
+    background-color: #f3f0d7;
+  }
+}
+
+.btn {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
