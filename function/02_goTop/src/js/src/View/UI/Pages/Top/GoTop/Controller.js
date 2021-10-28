@@ -15,7 +15,8 @@ export default class Controller extends Base {
 
     this.name = "GoTop";
     this.$btn = $(".js-goTop");
-    this.$icon = this.$btn.find("img");
+    this.$icon = this.$btn.find("svg");
+    this.html = document.documentElement;
 
     this.setup();
     this.setEvents();
@@ -24,14 +25,24 @@ export default class Controller extends Base {
   setup() {}
 
   onClick() {
+    // gsap.to(this.html, 0.8, {
+    //   ease: "power4.out",
+    //   scrollTop: 0,
+    // });
+
     const st = { top: $(window).scrollTop() }; // スクロール量
     const top = 0;
 
+    console.log(st, "st"); // {top: 3520}
+    console.log(st.top); // 3520
+
+    // 3520を0にアニメーション
     gsap.to(st, 0.8, {
-      top: top,
+      top: top, // 0へ数字を減らしていく
       ease: "power4.out",
       onUpdate() {
-        $(window).scrollTop(st.top); // st.topまで移動
+        console.log(st.top, "st.top");
+        $(window).scrollTop(st.top); // 数字減るたびにupdateでレンダリング
       },
     });
   }
