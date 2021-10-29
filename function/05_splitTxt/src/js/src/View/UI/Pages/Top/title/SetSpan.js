@@ -32,7 +32,7 @@ export default class SpanText {
 
     const text = this.$wrap.html(); // 渋谷公園<br />miyashita park
     const split = /<br>/g; // gオプション→全ての<br>を取得する
-    const span = text.split(split); // split：指定文字列で分割して配列に格納
+    const span = text.split(/<br>/); // split：指定文字列で分割して配列に格納
 
     // console.log(span)
     //  ['Hello, World'] 'span'
