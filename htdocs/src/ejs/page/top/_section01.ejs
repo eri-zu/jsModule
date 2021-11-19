@@ -1,40 +1,20 @@
 <!-- ************************************************************
 //  section01
 // ************************************************************ -->
+<% const items = ["01_vh", "02_goTop", "03_goPoint", "04_scrollShow"]; %>
+
 <div class="wrap">
   <div class="title">function</div>
   <ul class="list">
+    <% for (let i = 0; i < items.length; i++) { %>
     <li class="item">
       <a
-        href="https://eri-zu.github.io/jsModule/function/01_vh/dist"
+        href="https://eri-zu.github.io/jsModule/function/<%= items[i] %>/dist"
         target="_blank"
         rel="noopener noreferrer"
-        >01_vh</a
-      >
+        ><%= items[i] %>
+      </a>
     </li>
-    <li class="item">
-      <a
-        href="https://eri-zu.github.io/jsModule/function/02_goTop/dist"
-        target="_blank"
-        rel="noopener noreferrer"
-        >02_goTop</a
-      >
-    </li>
-    <li class="item">
-      <a
-        href="https://eri-zu.github.io/jsModule/function/03_goPoint/dist"
-        target="_blank"
-        rel="noopener noreferrer"
-        >03_goPoint</a
-      >
-    </li>
-    <li class="item">
-      <a
-        href="https://eri-zu.github.io/jsModule/function/04_scrollShow/dist"
-        target="_blank"
-        rel="noopener noreferrer"
-        >04_scrollShow</a
-      >
-    </li>
+    <% } %>
   </ul>
 </div>
