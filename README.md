@@ -1,5 +1,5 @@
 # jsModule
 
-# module list 
+module list 
 https://eri-zu.github.io/jsModule/htdocs/dist/
 
