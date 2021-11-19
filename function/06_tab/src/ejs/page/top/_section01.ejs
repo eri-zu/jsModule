@@ -1,0 +1,27 @@
+<!-- ************************************************************
+//  section01
+// ************************************************************ -->
+<div class="wrap">
+  <div class="tab js-tab">
+    <ul class="tab__btn">
+      <div class="tab__btn-item js-tab_btn is-active">tab1</div>
+      <div class="tab__btn-item js-tab_btn">tab2</div>
+    </ul>
+    <ul class="tab__contents">
+      <ul class="tab__contents-list js-tab_contents is-active">
+        <% for (let i = 0; i < 9; i++) { %>
+        <li class="tab__contents-item js-tab_contents_item">
+          <img src="./assets/resource/img/1.jpg" alt="" />
+        </li>
+        <%} %>
+      </ul>
+      <ul class="tab__contents-list js-tab_contents">
+        <% for (let i = 0; i < 9; i++) { %>
+        <li class="tab__contents-item js-tab_contents_item">
+          <img src="./assets/resource/img/2.jpg" alt="" />
+        </li>
+        <%} %>
+      </ul>
+    </ul>
+  </div>
+</div>
