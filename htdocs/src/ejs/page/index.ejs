@@ -1,25 +1,26 @@
 <% var rootPATH = '../', contentsPATH = './top/', PATH = './', page = 'top'; %>
 <!DOCTYPE html>
 <html lang="ja" class="htmlTop">
-<head>
-<%- include(rootPATH + 'inc/_meta', {data:data, meta:data['common']}); %>
-<link href="<%- PATH %>assets/css/style.css" rel="stylesheet">
-<%- include(rootPATH + 'inc/_log'); %>
-</head>
-<body id="<%- page %>" class="">
+  <head>
+    <%- include(rootPATH + 'inc/_meta', {data:data, meta:data['common']}); %>
+    <link href="<%- PATH %>assets/css/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <%- include(rootPATH + 'inc/_log'); %>
+  </head>
+  <body id="<%- page %>" class="">
+    <div id="wrapper" class="id_<%- page %>">
+      <div id="inner">
+        <%- include(rootPATH + 'parts/common/_header', {PATH: PATH}); %> <%-
+        include(contentsPATH + '_section01', {page:page, PATH: PATH}); %> <%-
+        include(rootPATH + 'parts/common/_footer', {PATH: PATH}); %>
+      </div>
+    </div>
 
-<div id="wrapper" class="id_<%- page %>">
-<div id="inner">
-
-  <%- include(rootPATH + 'parts/common/_header', {PATH: PATH}); %>
-
-  <%- include(contentsPATH + '_section01', {page:page, PATH: PATH}); %>
-
-  <%- include(rootPATH + 'parts/common/_footer', {PATH: PATH}); %>
-
-</div>
-</div>
-
-<%- include(rootPATH + 'inc/_script', {PATH: PATH}); %>
-</body>
+    <%- include(rootPATH + 'inc/_script', {PATH: PATH}); %>
+  </body>
 </html>

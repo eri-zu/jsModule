@@ -1,21 +1,41 @@
 <!-- ************************************************************
 //  section01
 // ************************************************************ -->
-<% const items = ["01_vh", "02_goTop", "03_goPoint", "04_scrollShow",
-"05_accordion", "06_tab"]; %>
+<% const functionItems = ["01 vh", "02 goTop", "03 goPoint", "04 scrollShow",
+"05 accordion", "06 tab", "07 lottie"]; %> <% const motionItems = ["01 vh", ];
+%>
 
 <div class="wrap">
-  <div class="title">function</div>
-  <ul class="list">
-    <% for (let i = 0; i < items.length; i++) { %>
-    <li class="item">
-      <a
-        href="https://eri-zu.github.io/jsModule/function/<%= items[i] %>/dist"
-        target="_blank"
-        rel="noopener noreferrer"
-        ><%= items[i] %>
-      </a>
-    </li>
-    <% } %>
-  </ul>
+  <div class="box">
+    <div class="title"># function</div>
+    <ul class="list">
+      <% for (let i = 0; i < functionItems.length; i++) { %>
+      <li class="item">
+        <a
+          href="https://eri-zu.github.io/jsModule/function/<%= functionItems[i] %>/dist"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><%= functionItems[i] %>
+        </a>
+      </li>
+      <% } %>
+    </ul>
+  </div>
+
+  <div class="box">
+    <div class="title"># motion - hover</div>
+    <ul class="list">
+      <div class="subtitle">hover</div>
+      <% for (let i = 0; i < motionItems.length; i++) { %>
+      <li class="item">
+        <a
+          href="https://eri-zu.github.io/jsModule/function/<%= motionItems[i] %>/dist"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><%= motionItems[i] %>
+        </a>
+      </li>
+      <% } %>
+    </ul>
+  </div>
 </div>

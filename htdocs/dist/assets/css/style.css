@@ -6,7 +6,7 @@
 *   text / font
 -------------------------------------------------------------------------------- */
 #loading .loadingPercent {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-style: normal;
   font-weight: 700;
 }
@@ -472,12 +472,12 @@ img {
 *
 -------------------------------------------------------------------------------- */
 html {
-  color: #000;
+  color: #fff;
   font-size: 10px;
-  font-family: "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, "メイリオ", Arial, sans-serif;
+  font-family: "Ropa Sans", sans-serif;
   font-weight: 400;
   letter-spacing: 0.025em;
-  background-color: #fff;
+  background-color: #151515;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   opacity: 1;
@@ -1066,22 +1066,22 @@ body.no-select {
 *
 -------------------------------------------------------------------------------- */
 a {
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
 
 a:hover {
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
 
 a:visited {
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
 
 a:active {
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -1141,11 +1141,15 @@ a:active {
 
 #wrapper.id_top .wrap {
   padding: 100px;
-  color: #000;
+  color: #fff;
+}
+
+#wrapper.id_top .box:nth-child(n + 2) {
+  margin-top: 50px;
 }
 
 #wrapper.id_top .title {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
 }
 
 #wrapper.id_top .list {
@@ -1158,7 +1162,7 @@ a:active {
 }
 
 #wrapper.id_top .item a {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   text-decoration: underline;
 }
 
