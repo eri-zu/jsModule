@@ -484,7 +484,7 @@ html {
   font-family: "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, "メイリオ", Arial, sans-serif;
   font-weight: 400;
   letter-spacing: 0.025em;
-  background-color: #262626;
+  background-color: #fff;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   opacity: 1;
@@ -1154,60 +1154,34 @@ a:active {
 
 #wrapper.id_top .list {
   margin-left: 100px;
-}
-
-#wrapper.id_top .list__inner {
   display: flex;
+  align-items: center;
   justify-content: flex-start;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: 3rem;
-}
-
-#wrapper.id_top .list__inner::-webkit-scrollbar {
-  height: 10px;
-  display: block;
-}
-
-@media only screen and (max-width: 768px) {
-  #wrapper.id_top .list__inner::-webkit-scrollbar {
-    height: 8px;
-  }
-}
-
-#wrapper.id_top .list__inner::-webkit-scrollbar-track {
-  background: #f2f2f2;
-  border-radius: 8px;
-  margin-right: 50px;
-}
-
-#wrapper.id_top .list__inner::-webkit-scrollbar-thumb {
-  background: #5f6469;
-  border-radius: 8px;
 }
 
 #wrapper.id_top .list__item {
   min-width: 300px;
   max-width: 300px;
   position: relative;
+  cursor: pointer;
 }
 
-#wrapper.id_top .list__item img {
+#wrapper.id_top .list__item a {
+  display: block;
   width: 100%;
+  height: 100%;
 }
 
 #wrapper.id_top .list__item:nth-child(n + 2) {
   margin-left: 50px;
 }
 
-#wrapper.id_top .list__item:last-child::after {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  width: 50px;
-  height: 1px;
-  content: "";
+#wrapper.id_top .list__imgwrap {
+  overflow: hidden;
+}
+
+#wrapper.id_top .list__imgwrap img {
+  width: 100%;
 }
 
 #wrapper.id_top .wrap {
