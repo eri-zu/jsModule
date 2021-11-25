@@ -494,7 +494,6 @@ html {
 
 body {
   overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 /* --------------------------------------------------------------------------------
@@ -1153,17 +1152,17 @@ a:active {
 }
 
 #wrapper.id_top .list {
-  margin-left: 100px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 #wrapper.id_top .list__item {
-  min-width: 300px;
-  max-width: 300px;
+  width: calc(100% / 3 - 10px * 6 / 3);
   position: relative;
   cursor: pointer;
+  margin: 10px;
 }
 
 #wrapper.id_top .list__item a {
@@ -1172,26 +1171,12 @@ a:active {
   height: 100%;
 }
 
-#wrapper.id_top .list__item:nth-child(n + 2) {
-  margin-left: 50px;
-}
-
 #wrapper.id_top .list__imgwrap {
   overflow: hidden;
 }
 
 #wrapper.id_top .list__imgwrap img {
   width: 100%;
-}
-
-#wrapper.id_top .wrap {
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-}
-
-#wrapper.id_top .item {
-  width: 50vw;
 }
 
 .demoSvg {

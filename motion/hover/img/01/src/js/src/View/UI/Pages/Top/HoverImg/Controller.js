@@ -22,11 +22,13 @@ export default class Controller extends Base {
   setup() {}
 
   onEnter($target) {
+    if ($target.tl) $target.tl.kill();
+
     const $wrap = $target.find(".js-hover_imgwrap");
     const $img = $target.find(".js-hover_img");
 
-    const tl = gsap.timeline();
-    tl
+    $target.tl = gsap.timeline();
+    $target.tl
       // 枠
       .to($wrap, 1, {
         scale: 0.98,
@@ -45,11 +47,13 @@ export default class Controller extends Base {
   }
 
   onLeave($target) {
+    if ($target.tl) $target.tl.kill();
+
     const $wrap = $target.find(".js-hover_imgwrap");
     const $img = $target.find(".js-hover_img");
 
-    const tl = gsap.timeline();
-    tl
+    $target.tl = gsap.timeline();
+    $target.tl
       // 枠
       .to($wrap, 1, {
         scale: 1,
