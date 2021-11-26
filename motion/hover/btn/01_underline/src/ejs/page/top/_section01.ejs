@@ -1,0 +1,21 @@
+<!-- ************************************************************
+//  section01
+// ************************************************************ -->
+
+<div class="wrap">
+  <ul class="list">
+    <% for (let i = 0; i < 10; i++) {%>
+    <li class="list__item js-hover_item">
+      <a href="#">
+        <div class="list__imgwrap js-hover_imgwrap">
+          <img
+            src="./assets/resource/img/<%- i + 1 %>.jpg"
+            alt=""
+            class="js-hover_img"
+          />
+        </div>
+      </a>
+    </li>
+    <%}%>
+  </ul>
+</div>
