@@ -903,25 +903,30 @@ body.no-select {
 
 .btn01 {
   position: relative;
+  border: 1px solid #000;
   display: inline-flex;
-  align-items: center;
   justify-content: center;
-  padding-bottom: 5px;
+  align-items: center;
+  padding: 10px;
+  overflow: hidden;
 }
 
 .btn01__txt {
   font-size: 14px;
   font-weight: 700;
   line-height: 1;
+  color: #000;
 }
 
-.btn01__line {
-  width: 100%;
-  height: 1px;
-  background-color: #ff8201;
+.btn01__bg {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  z-index: -1;
 }
 
 /* --------------------------------------------------------------------------------

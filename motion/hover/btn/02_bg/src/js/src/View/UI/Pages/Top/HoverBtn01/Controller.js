@@ -29,22 +29,22 @@ export default class Controller extends Base {
     if (this.$target.tl) this.$target.tl.kill();
 
     const $txt = this.$target.find(".js-btn01_txt");
-    const $line = this.$target.find(".js-btn01_line");
+    const $bg = this.$target.find(".js-btn01_bg");
 
     this.$target.tl = gsap.timeline();
     this.$target.tl
       // txt
       .to($txt, this.duration, {
-        color: "#ff8201",
+        color: "#fff",
         ease: "expo.out",
       })
       // line
       .to(
-        $line,
+        $bg,
         this.duration,
         {
-          transformOrigin: "100% 50%",
-          scaleX: 0,
+          transformOrigin: "0% 50%",
+          scaleX: 1.01,
           ease: "expo.out",
         },
         0
@@ -66,7 +66,7 @@ export default class Controller extends Base {
     }
 
     const $txt = this.$target.find(".js-btn01_txt");
-    const $line = this.$target.find(".js-btn01_line");
+    const $bg = this.$target.find(".js-btn01_bg");
 
     this.$target.tl
       // txt
@@ -81,11 +81,11 @@ export default class Controller extends Base {
       )
       // line
       .to(
-        $line,
+        $bg,
         this.duration,
         {
-          transformOrigin: "0% 50%",
-          scaleX: 1,
+          transformOrigin: "101% 50%",
+          scaleX: 0,
           ease: "expo.out",
         },
         time
