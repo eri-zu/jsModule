@@ -85,7 +85,7 @@ export default class Controller extends Base {
           rotation: "+=90",
           opacity: i == 0 ? 1 : 1,
           startAt: {
-            rotation: i == 0 ? 0 : 90,
+            rotation: i == 0 ? 90 : 180,
           },
           ease: "expo.out",
         },
