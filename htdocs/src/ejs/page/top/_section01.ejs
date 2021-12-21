@@ -1,9 +1,25 @@
 <!-- ************************************************************
 //  section01
 // ************************************************************ -->
-<% const functionItems = ["01 vh", "02 goTop", "03 goPoint", "04 scrollShow",
-"05 accordion", "06 tab", "07 lottie"]; %> <% const motionItems = ["01 vh", ];
-%>
+<!-- prettier-ignore -->
+<% const functionItems = [
+  "01_vh", 
+  "02_goTop", 
+  "03_goPoint", 
+  "04_scrollShow",
+  "04_scrollShow2",
+  "05_accordion", 
+  "06_tab", 
+  "07_lottie"
+  ]; 
+%> 
+<% const motionHoverBtn = [
+  "01_underline", 
+  "02_bg", 
+];%>
+<% const motionHoverImg = [
+  "01_scale", 
+];%>
 
 <div class="wrap">
   <div class="box">
@@ -23,19 +39,43 @@
   </div>
 
   <div class="box">
-    <div class="title"># motion - hover</div>
+    <div class="title"># motion</div>
     <ul class="list">
-      <div class="subtitle">hover</div>
-      <% for (let i = 0; i < motionItems.length; i++) { %>
-      <li class="item">
-        <a
-          href="https://eri-zu.github.io/jsModule/function/<%= motionItems[i] %>/dist"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><%= motionItems[i] %>
-        </a>
+      <li>
+        <div class="category">hover</div>
+        <ul class="list">
+          <li class="list__item">
+            <div class="subcategory">btn</div>
+            <ul class="list">
+              <% for (let i = 0; i < motionHoverBtn.length; i++) { %>
+              <li class="item">
+                <a
+                  href="https://eri-zu.github.io/jsModule/motion/hover/btn<%= motionHoverBtn[i] %>/dist"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><%= motionHoverBtn[i] %>
+                </a>
+              </li>
+              <% } %>
+            </ul>
+          </li>
+          <li class="list__item">
+            <div class="subcategory">img</div>
+            <ul class="list">
+              <% for (let i = 0; i < motionHoverImg.length; i++) { %>
+              <li class="item">
+                <a
+                  href="https://eri-zu.github.io/jsModule/motion/hover/btn<%= motionHoverImg[i] %>/dist"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><%= motionHoverImg[i] %>
+                </a>
+              </li>
+              <% } %>
+            </ul>
+          </li>
+        </ul>
       </li>
-      <% } %>
     </ul>
   </div>
 </div>

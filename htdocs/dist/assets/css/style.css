@@ -1149,11 +1149,15 @@ a:active {
 }
 
 #wrapper.id_top .title {
-  font-size: 2.2rem;
+  font-size: 24px;
 }
 
 #wrapper.id_top .list {
   margin-left: 20px;
+  margin-top: 10px;
+}
+
+#wrapper.id_top .list__item:nth-child(n + 2) {
   margin-top: 10px;
 }
 
@@ -1164,6 +1168,14 @@ a:active {
 #wrapper.id_top .item a {
   font-size: 1.8rem;
   text-decoration: underline;
+}
+
+#wrapper.id_top .category {
+  font-size: 22px;
+}
+
+#wrapper.id_top .subcategory {
+  font-size: 20px;
 }
 
 .demoSvg {

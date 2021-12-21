@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+/* --------------------------------------------------------------------------------
+*
+*   list
+*
+-------------------------------------------------------------------------------- */
+.wrap {
+  max-width: 1080px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+// .inner {
+//   height: 100%;
+
+// }
+
+.btnarea {
+  text-align: center;
+
+  &:nth-child(n + 2) {
+    margin-top: 50px;
+  }
+}
