@@ -7,7 +7,7 @@
 import Base from "@BALANCeLibs/Base.js";
 import * as m from "@BALANCeLibs/Util/Math.js";
 import gsap from "gsap";
-import HoverImg from "./HoverImg/Controller";
+import HoverBtn01 from "./HoverBtn01/Controller";
 
 export default class Controller extends Base {
   constructor() {
@@ -18,7 +18,7 @@ export default class Controller extends Base {
   }
 
   setup() {
-    new HoverImg();
+    new HoverBtn01();
   }
 
   timeline() {}
