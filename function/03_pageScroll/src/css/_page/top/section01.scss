@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+/* --------------------------------------------------------------------------------
+*
+*   section01
+*
+-------------------------------------------------------------------------------- */
+.scrollArea {
+  padding-left: 300px;
+}
+
+.news {
+  height: 100vh;
+  background-color: #bad7df;
+  padding: 100px;
+}
+
+.about {
+  height: 300vh;
+  background-color: #ffe2e2;
+  padding: 100px;
+}
+
+.theater {
+  height: 100vh;
+  background-color: #99ddcc;
+  padding: 100px;
+}
+
+.contact {
+  height: 50vh;
+  background-color: #f6f6f6;
+  padding: 100px;
+}
+
+h2 {
+  font-size: 20px;
+}

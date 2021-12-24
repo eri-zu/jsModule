@@ -1,0 +1,52 @@
+<!-- ************************************************************
+//
+//  header
+//
+// ************************************************************ -->
+<!-- prettier-ignore -->
+<% 
+  const menus = [
+    {
+      id: 0,
+      name: "news",
+      href: "#news"
+    }, 
+    {
+      id: 1,
+      name: "about",
+      href: "#about"
+    }, 
+    {
+      id: 2,
+      name: "theater",
+      href: "#theater"
+    }, 
+    {
+      id: 3,
+      name: "contact",
+      href: "#contact"
+    }, 
+  ];  
+%>
+
+<header class="header" id="header">
+  <div class="header__inner">
+    <div class="header__nav">
+      <div class="nav">
+        <ul class="nav__list">
+          <% for (let i = 0; i < menus.length; i++) { %>
+          <li class="nav__item">
+            <% if(i == menus.length - 1) { %>
+            <a class="js-pagescroll_btn js-pagescroll_lastsection" href="<%= menus[i].href %>">
+            <% } else { %> 
+            <a class="js-pagescroll_btn" href="<%= menus[i].href %>">
+            <% } %>
+              <span class="nav__item-txt"><%= menus[i].name %></span>
+            </a>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
