@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/* --------------------------------------------------------------------------------
+*
+*   section01
+*
+-------------------------------------------------------------------------------- */
+.section {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 16px;
+}
+
+.section01 {
+  background-color: #d1e8e4;
+}
+.section02 {
+  background-color: #c37b89;
+}
+.section03 {
+  background-color: #bccc9a;
+}
+.section04 {
+  background-color: #eae7c6;
+}
+
+.btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 20px;
+  }
+}
