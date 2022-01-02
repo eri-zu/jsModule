@@ -3,10 +3,37 @@
 //  footer
 //
 // ************************************************************ -->
-<footer id="footer">
+<% const easing = { out: ["power1.out", "power2.out", "power3.out",
+"power4.out", "expo.out", "custom.out"], in: ["power1.in", "power2.in",
+"power3.in", "power4.in", "expo.in", "custom.in"], inout: ["power1.inOut",
+"power2.inOut", "power3.inOut", "power4.inOut", "expo.inOut", "custom.inOut"], }
+%>
 
+<footer class="footer" id="footer">
+  <div class="footer__inner">
+    <div class="list reset">
+      <a href="" class="btn -reset js-reset">reset</a>
+    </div>
+    <div class="list">
+      <% for (let i = 0; i < easing.out.length; i++) { %>
+      <a class="btn -out js-goTop" data-easing="<%= easing.out[i] %>"
+        ><%= easing.out[i] %></a
+      >
+      <%} %>
+    </div>
+    <div class="list">
+      <% for (let i = 0; i < easing.out.length; i++) { %>
+      <a class="btn -in js-goTop" data-easing="<%= easing.in[i] %>"
+        ><%= easing.in[i] %></a
+      >
+      <%} %>
+    </div>
+    <div class="list">
+      <% for (let i = 0; i < easing.out.length; i++) { %>
+      <a class="btn -inOut js-goTop" data-easing="<%= easing.inout[i] %>"
+        ><%= easing.inout[i] %></a
+      >
+      <%} %>
+    </div>
+  </div>
 </footer>
-
-
-
-

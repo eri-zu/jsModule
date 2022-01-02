@@ -31,7 +31,7 @@ export default class Controller {
     // UrlParam パラメータ調整用
     gb.urlp = new UrlParamMgr();
 
-    if (gb.conf.Profiler) new Profiler(); // Profiler
+    // if (gb.conf.Profiler) new Profiler(); // Profiler
   }
 
   setEvents() {}

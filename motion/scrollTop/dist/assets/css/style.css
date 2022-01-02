@@ -461,6 +461,52 @@ img {
 *   footer
 *
 -------------------------------------------------------------------------------- */
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 769px) {
+  .list {
+    justify-content: center;
+  }
+}
+
+.btn {
+  padding: 10px;
+  font-size: 16px;
+  display: block;
+  margin: 10px;
+}
+
+.btn.-reset {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn.-out {
+  background-color: #fff;
+  color: #000;
+}
+
+.btn.-in {
+  background-color: #666;
+  color: #fff;
+}
+
+.btn.-inOut {
+  background-color: #000;
+  color: #fff;
+}
+
 /* --------------------------------------------------------------------------------
 *
 *   header
@@ -1161,23 +1207,6 @@ a:active {
 
 #wrapper.id_top .section04 {
   background-color: #eae7c6;
-}
-
-#wrapper.id_top .btn {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  border: 1px solid #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#wrapper.id_top .btn svg {
-  width: 20px;
 }
 
 .demoSvg {
