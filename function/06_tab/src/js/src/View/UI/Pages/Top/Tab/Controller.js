@@ -24,11 +24,14 @@ export default class Controller extends Base {
   }
 
   setup() {
-    gsap.set(this.$contents.eq(1).find(".js-tab_contents_item"), {
-      opacity: 0,
-    });
+    gsap.set(
+      $(".js-tab_contents:nth-child(n + 2)").find(".js-tab_contents_item"),
+      {
+        opacity: 0,
+      }
+    );
 
-    gsap.set(this.$btn.eq(1), {
+    gsap.set($(".js-tab_btn:nth-child(n + 2)"), {
       backgroundColor: "#fff",
       color: "#000",
     });
