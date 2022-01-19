@@ -1,0 +1,36 @@
+<!-- ************************************************************
+//  section01
+// ************************************************************ -->
+
+<div class="wrap">
+  <% for (let i = 0; i < 3; i++) {%>
+  <div class="section0<%= i + 1 %>__btnarea">
+    <div class="section0<%= i + 1 %>__btnwrap js-btn01">
+      <a href="" class="btn01">
+        <div class="btn01__inner">
+          <div class="btn01__txtwrap js-btn01_txtwrap">
+            <div class="btn01__txtarea">
+              <span class="btn01__txt js-btn01_txt">募集職種を見る</span>
+              <span class="btn01__icon js-btn01_icon">
+                <%-
+                include("../../../../dist/assets/resource/svg/icon_link.svg") %>
+              </span>
+            </div>
+            <div class="btn01__txtarea">
+              <span class="btn01__txt js-btn01_txt">募集職種を見る</span>
+              <span class="btn01__icon js-btn01_icon">
+                <%-
+                include("../../../../dist/assets/resource/svg/icon_link.svg") %>
+              </span>
+            </div>
+          </div>
+        </div>
+        <span class="btn01__bg js-btn01_bg"></span>
+      </a>
+      <span class="btn01__bar01 js-btn01_bar01"></span>
+      <span class="btn01__bar02 js-btn01_bar02"></span>
+    </div>
+  </div>
+
+  <%}%>
+</div>
