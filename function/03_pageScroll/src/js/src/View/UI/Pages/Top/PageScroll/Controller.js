@@ -20,8 +20,8 @@ export default class Controller extends Base {
 
     this.$btn = $(".js-pagescroll_btn");
     this.$html = $("html");
-
     this.$lastsection = $(".js-pagescroll_lastsection");
+
     this.st = 0;
 
     this.setup();
@@ -40,7 +40,7 @@ export default class Controller extends Base {
     // スクロール量
     this.st = $(window).scrollTop();
 
-    // contact topまでの高さ
+    // last section topまでの高さ
     const top = this.$lastsection.get(0).getBoundingClientRect().top + this.st;
     const wholeHeight = document.body.clientHeight;
 
@@ -52,13 +52,9 @@ export default class Controller extends Base {
     const href = $(btn).attr("href");
     const $targetPosEle = $(href);
 
-    let targetTop;
-
-    if (href == "#contact") {
-      targetTop = $targetPosEle.offset().top - this.buffa;
-    } else {
-      targetTop = $targetPosEle.offset().top;
-    }
+    const targetTop = btn.classList.contains("js-pagescroll_lastsection_btn")
+      ? $targetPosEle.offset().top - this.buffa
+      : $targetPosEle.offset().top;
 
     gsap.to(this.$html, 1, {
       scrollTop: targetTop,
