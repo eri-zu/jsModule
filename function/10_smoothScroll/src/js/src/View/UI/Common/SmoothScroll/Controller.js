@@ -84,17 +84,26 @@ export default class Controller extends Base {
   update() {
     for (const key in this.renderedStyles) {
       // currentにスクロール量（=目標値）
-      this.renderedStyles[key].current = this.renderedStyles[key].setValue();
+      // this.renderedStyles[key].current = this.renderedStyles[key].setValue();
+      this.targetValue = this.renderedStyles[key].setValue();
+
+      this.renderedStyles[key].current +=
+        (this.targetValue - this.renderedStyles[key].current) *
+        this.renderedStyles[key].ease;
 
       // lerpさせる
-      this.renderedStyles[key].previous = this.MathUtils.lerp(
-        this.renderedStyles[key].previous,
-        this.renderedStyles[key].current,
-        this.renderedStyles[key].ease
-      );
+      // this.renderedStyles[key].previous = this.MathUtils.lerp(
+      //   this.renderedStyles[key].previous,
+      //   this.renderedStyles[key].current,
+      //   this.renderedStyles[key].ease
+      // );
     }
 
-    this.layout();
+    this.scrollTarget.style.transform = `translate3d(0,${
+      -1 * this.renderedStyles.translationY.current
+    }px,0)`;
+
+    // this.layout();
   }
 
   onResize() {
