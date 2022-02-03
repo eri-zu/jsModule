@@ -35,10 +35,9 @@ export default class Controller extends Base {
 
   ready() {
     // スクロール量
-    this.docScroll = 0;
+    this.st = 0;
     this.getPageYScroll = () => {
-      this.docScroll = window.pageYOffset || document.documentElement.scrollTop;
-      // console.log(this.docScroll);
+      this.st = window.pageYOffset || document.documentElement.scrollTop;
     };
 
     // util
@@ -51,11 +50,11 @@ export default class Controller extends Base {
         previous: 0,
         current: 0,
         ease: 0.1,
-        setValue: () => this.docScroll,
+        setValue: () => this.st,
       },
     };
 
-    console.log(this.docScroll, "this.docScroll");
+    console.log(this.st, "this.st");
   }
 
   reset() {
@@ -87,8 +86,6 @@ export default class Controller extends Base {
       // currentにスクロール量（=目標値）
       this.renderedStyles[key].current = this.renderedStyles[key].setValue();
 
-      console.log(this.renderedStyles[key].setValue());
-
       // lerpさせる
       this.renderedStyles[key].previous = this.MathUtils.lerp(
         this.renderedStyles[key].previous,
@@ -106,6 +103,11 @@ export default class Controller extends Base {
 
   setEvents() {
     super.setEvents();
-    window.addEventListener("scroll", this.getPageYScroll.bind(this));
+
+    window.addEventListener("scroll", this.getPageYScroll);
+  }
+
+  removeEvents() {
+    // window.removeEventListener("scroll", this.getPageYScroll);
   }
 }
