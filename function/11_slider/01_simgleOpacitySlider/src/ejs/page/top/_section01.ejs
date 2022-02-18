@@ -1,0 +1,26 @@
+<!-- ************************************************************
+//  section01
+// ************************************************************ -->
+<div class="section section01">
+  <div class="slider js-slider">
+    <div class="slider__inner">
+      <ul class="slider__list">
+        <% for(let i = 0; i < 3;i ++) { %>
+        <li class="slider__item js-slider_item">
+          <p class="slider__img">
+            <img src="./assets/resource/img/<%= i + 1%>.jpg" alt="" />
+          </p>
+          <p class="slider__txt"><%= i + 1%></p>
+        </li>
+        <% } %>
+      </ul>
+      <div class="slider__indicator js-slider_indicator">
+        <div class="slider__indicator-current js-slider_current">01</div>
+        <div class="slider__indicator-bar">
+          <div class="slider__indicator-barin js-slider_bar"></div>
+        </div>
+        <div class="slider__indicator-total">03</div>
+      </div>
+    </div>
+  </div>
+</div>
