@@ -16,12 +16,12 @@ export default class Controller extends Base {
 
     this.isREv = true;
 
+    // 共通要素
     this.$modal = $(".js-videomodal");
-    this.$openbtn = $(".js-videomodal_openbtn");
     this.$closebtn = this.$modal.find(".js-videomodal_close");
-    this.video = document.querySelector(".js-videomodal video");
 
-    this.isAppend = false;
+    // 個別要素
+    this.$openbtn = $(".js-videomodal_openbtn");
 
     this.disableScroll = (e) => {
       e.preventDefault();
@@ -35,23 +35,29 @@ export default class Controller extends Base {
     this.renderer = new Renderer(this.$closebtn, this.$modal);
   }
 
-  appendVideo() {
+  appendVideo(target) {
+    const id = target.dataset.id;
+    console.log(target);
+
+    target.video = document.querySelector(id);
+    console.log(target.video);
+
     // 初回読み込み時カクつくので
     this.delay = this.isAppend ? 0 : 0.3;
 
-    if (this.isAppend) return;
-    this.isAppend = true;
+    if (target.isAppend) return;
+    target.isAppend = true;
 
     const src =
       UAParser().device.type !== "mobile"
-        ? this.video.dataset.srcpc
-        : this.video.dataset.srcsp;
+        ? target.video.dataset.srcpc
+        : target.video.dataset.srcsp;
 
-    this.video.src = src;
+    target.video.src = src;
   }
 
-  show() {
-    this.appendVideo();
+  show(target) {
+    this.appendVideo(target);
 
     this.$modal.css("pointer-events", "auto");
 
@@ -129,11 +135,11 @@ export default class Controller extends Base {
   setEvents() {
     super.setEvents();
 
-    this.$openbtn.on("click" + "." + this.name, () => {
-      this.show();
+    this.$openbtn.on("click" + "." + this.name, (e) => {
+      this.show(e.currentTarget);
 
       setTimeout(() => {
-        this.video.play();
+        e.currentTarget.video.play();
       }, 1.0 + this.delay);
     });
 
