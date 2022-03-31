@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+/* --------------------------------------------------------------------------------
+*
+*   section01
+*
+-------------------------------------------------------------------------------- */
+.section01 {
+}
+
+.section02__videobg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+
+  // opacity: 0;
+
+  // background-image: url("../resource/img/section02_bg.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // z-index: -1;
+
+  @include max(750) {
+    height: 61vw;
+    top: 100%;
+    transform: translateY(-100%);
+  }
+}
+
+.section02__video-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  overflow: hidden;
+
+  video {
+    width: 100%;
+    // height: 100%;
+    object-fit: cover;
+
+    height: 112%;
+    // object-fit: cover;
+  }
+}
