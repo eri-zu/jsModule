@@ -4,13 +4,13 @@
   "description": "",
   "main": "gulpfile.babel.js",
   "scripts": {
-    "build":"webpack --mode development",
-    "dev":"run-p dev:*",
-    "dev:watch":"webpack --watch",
-    "dev:gulp":"gulp",
-    "release":"run-s release:*",
-    "release:webpack":"webpack --mode production",
-    "release:gulp":"gulp release"
+    "build": "webpack --mode development",
+    "dev": "run-p dev:*",
+    "dev:watch": "webpack --watch",
+    "dev:gulp": "gulp",
+    "release": "run-s release:*",
+    "release:webpack": "webpack --mode production",
+    "release:gulp": "gulp release"
   },
   "keywords": [],
   "author": "",

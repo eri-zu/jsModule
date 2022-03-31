@@ -468,6 +468,117 @@ img {
 -------------------------------------------------------------------------------- */
 /* --------------------------------------------------------------------------------
 *
+*   videomodal
+*
+-------------------------------------------------------------------------------- */
+.videomodal {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateZ(2px);
+}
+
+.videomodal__bg {
+  background-color: #000;
+  opacity: 0.8;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.videomodal__contents {
+  position: absolute;
+  top: calc(50% + 20px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 687px;
+  max-width: calc(100% - 40px);
+}
+
+@media (min-width: 751px) {
+  .videomodal__contents {
+    aspect-ratio: 1400 / 786;
+  }
+}
+
+@media (max-width: 750px) {
+  .videomodal__contents {
+    aspect-ratio: 750 / 420;
+  }
+}
+
+.videomodal__videoarea {
+  width: 100%;
+  height: 0;
+}
+
+@media (min-width: 751px) {
+  .videomodal__videoarea {
+    padding-top: calc(786 / 1400 * 100%);
+  }
+}
+
+@media (max-width: 750px) {
+  .videomodal__videoarea {
+    padding-top: calc(420 / 750 * 100%);
+  }
+}
+
+.videomodal__videoarea video {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.videomodal__close {
+  position: absolute;
+  right: 0;
+  top: -42px;
+}
+
+.videomodal__close .svgwrap {
+  width: 27px;
+  height: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.videomodal__close .svgwrap svg {
+  width: 100%;
+  stroke: #fff;
+}
+
+.videomodal__cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(to right, #e8c3ce 0%, #e7d5c6 29%, #eceaee 61%, #e8e5ea 75%, #d2f1fa 100%);
+  z-index: 1;
+  pointer-events: none;
+  padding-top: calc(786 / 1400 * 100%);
+}
+
+@media (max-width: 750px) {
+  .videomodal__cover {
+    padding-top: calc(420 / 750 * 100%);
+  }
+}
+
+/* --------------------------------------------------------------------------------
+*
 *   html,body
 *
 -------------------------------------------------------------------------------- */
@@ -842,7 +953,7 @@ body {
   display: block;
   width: 0.7rem;
   height: 3.5rem;
-  content: '';
+  content: "";
   background-color: #000;
   position: absolute;
   left: 0;
@@ -850,7 +961,7 @@ body {
 }
 
 .up_bar:before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 100%;
@@ -892,6 +1003,19 @@ body.no-select {
   cursor: -moz-grabbing;
   cursor: -ms-grabbing;
   cursor: grabbing;
+}
+
+.btn01 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+.btn01__txt {
+  color: #fff;
 }
 
 /* --------------------------------------------------------------------------------
@@ -1137,6 +1261,69 @@ a:active {
 *   section01
 *
 -------------------------------------------------------------------------------- */
+  /* --------------------------------------------------------------------------------
+*
+*   section01
+*
+-------------------------------------------------------------------------------- */
+}
+
+#wrapper.id_top .section01 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#wrapper.id_top .section01__btnarea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#wrapper.id_top .btnwrap {
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+}
+
+#wrapper.id_top .btnwrap:nth-child(n + 2) {
+  margin-left: 20px;
+}
+
+#wrapper.id_top .section02__videobg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 750px) {
+  #wrapper.id_top .section02__videobg {
+    height: 61vw;
+    top: 100%;
+    transform: translateY(-100%);
+  }
+}
+
+#wrapper.id_top .section02__video-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  overflow: hidden;
+}
+
+#wrapper.id_top .section02__video-wrap video {
+  width: 100%;
+  object-fit: cover;
+  height: 112%;
 }
 
 .demoSvg {

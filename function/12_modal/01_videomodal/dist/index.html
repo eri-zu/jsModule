@@ -1,8 +1,10 @@
 
+
 <!DOCTYPE html>
+<!-- prettier-ignore -->
 <html lang="ja" class="htmlTop">
-<head>
-<!-- ************************************************************
+  <head>
+    <!-- ************************************************************
 //
 //  meta
 //
@@ -31,20 +33,18 @@
 <!-- <meta name="twitter:site" content=""> -->
 <meta name="twitter:image" content="">
 
-<link href="./assets/css/style.css" rel="stylesheet">
-<!-- ************************************************************
+    <link href="./assets/css/style.css" rel="stylesheet" />
+    <!-- ************************************************************
 //
 //  log
 //
 // ************************************************************ -->
 <!-- Global site tag (gtag.js) - Google Analytics -->
-</head>
-<body id="top" class="">
-
-<div id="wrapper" class="id_top">
-<div id="inner">
-
-  <!-- ************************************************************
+  </head>
+  <body id="top" class="">
+    <div id="wrapper" class="id_top">
+      <div id="inner">
+        <!-- ************************************************************
 //
 //  header
 //
@@ -53,21 +53,38 @@
 
 
 </header>
-
-
-  <!-- ************************************************************
+ 
+        <!-- ************************************************************
 //  section01
 // ************************************************************ -->
-<div class="section section01">
-  top
-  <div class="demoSvg">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 521 1"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;}</style></defs><g id="レイヤー_2" data-name="レイヤー 2"><g id="レイヤー_1-2" data-name="レイヤー 1"><line class="cls-1" y1="0.5" x2="521" y2="0.5"/></g></g></svg>
+<div class="section01">
+  <div class="section01__btnarea">
+    <div class="btnwrap js-videomodal_openbtn">
+      <div class="btn01">
+        <div
+          class="btn01__txt"
+          data-srcpc="./assets/resource/video/220301_CITIZENL_ONLINE_JP_pc.mp4"
+          data-srcsp="./assets/resource/video/220301_CITIZENL_ONLINE_JP_sp.mp4"
+        >
+          日本語
+        </div>
+      </div>
+    </div>
+    <div class="btnwrap">
+      <div class="btn01">
+        <div
+          class="btn01__txt"
+          data-srcpc="./assets/resource/video/220301_CITIZENL_ONLINE_ENG_pc.mp4"
+          data-srcsp="./assets/resource/video/220301_CITIZENL_ONLINE_ENG_sp.mp4"
+        >
+          英語
+        </div>
+      </div>
+    </div>
   </div>
-  
 </div>
-
-
-  <!-- ************************************************************
+ 
+        <!-- ************************************************************
 //
 //  footer
 //
@@ -80,15 +97,37 @@
 
 
 
+      </div>
 
-</div>
+      <!-- ************************************************************
+//
+//  videomodal
+//
+// ************************************************************ -->
+<div class="videomodal js-videomodal">
+  <div class="videomodal__bg"></div>
+  <div class="videomodal__contents">
+    <div class="videomodal__close">
+      <div class="svgwrap js-videomodal_close">
+        <div class="svgwrap js-videomodal_close_in">
+          <svg id="レイヤー_5" data-name="レイヤー 5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.81 21.81"><defs><style>.closesvg{fill:none;stroke-miterlimit:10;stroke-width:0.72px;}</style></defs><line class="closesvg" x1="0.25" y1="0.25" x2="21.56" y2="21.56"/><line class="closesvg" x1="21.56" y1="0.25" x2="0.25" y2="21.56"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="videomodal__videoarea">
+      <div class="videomodal__cover js-videomodal_cover"></div>
+      <video playsinline controls class="js-video_switch"></video>
+    </div>
+  </div>
 </div>
 
-<!-- ************************************************************
+    </div>
+
+    <!-- ************************************************************
 //
 //  script
 //
 // ************************************************************ -->
 <script src='./assets/js/bundle.js'></script>
-</body>
+  </body>
 </html>
