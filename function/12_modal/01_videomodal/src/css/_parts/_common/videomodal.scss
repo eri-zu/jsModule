@@ -33,13 +33,13 @@
   width: 687px;
   max-width: calc(100% - 40px);
 
-  @include min(751) {
-    aspect-ratio: 1400 / 786;
-  }
+  // @include min(751) {
+  //   aspect-ratio: 1400 / 786;
+  // }
 
-  @include max(750) {
-    aspect-ratio: 750 / 420;
-  }
+  // @include max(750) {
+  //   aspect-ratio: 750 / 420;
+  // }
 }
 
 .videomodal__videoarea {

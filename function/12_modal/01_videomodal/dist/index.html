@@ -49,11 +49,9 @@
 //  header
 //
 // ************************************************************ -->
-<header id="header">
-
-
-</header>
+<header id="header"></header>
  
+        <div class="section"></div>
         <!-- ************************************************************
 //  section01
 // ************************************************************ -->
@@ -61,24 +59,7 @@
   <div class="section01__btnarea">
     <div class="btnwrap js-videomodal_openbtn">
       <div class="btn01">
-        <div
-          class="btn01__txt"
-          data-srcpc="./assets/resource/video/220301_CITIZENL_ONLINE_JP_pc.mp4"
-          data-srcsp="./assets/resource/video/220301_CITIZENL_ONLINE_JP_sp.mp4"
-        >
-          日本語
-        </div>
-      </div>
-    </div>
-    <div class="btnwrap">
-      <div class="btn01">
-        <div
-          class="btn01__txt"
-          data-srcpc="./assets/resource/video/220301_CITIZENL_ONLINE_ENG_pc.mp4"
-          data-srcsp="./assets/resource/video/220301_CITIZENL_ONLINE_ENG_sp.mp4"
-        >
-          英語
-        </div>
+        <div class="btn01__txt">日本語</div>
       </div>
     </div>
   </div>
@@ -116,7 +97,13 @@
     </div>
     <div class="videomodal__videoarea">
       <div class="videomodal__cover js-videomodal_cover"></div>
-      <video playsinline controls class="js-video_switch"></video>
+      <video
+        playsinline
+        controls
+        data-srcpc="./assets/resource/video/220301_CITIZENL_ONLINE_JP_pc.mp4"
+        data-srcsp="./assets/resource/video/220301_CITIZENL_ONLINE_JP_sp.mp4"
+        class="js-video_switch"
+      ></video>
     </div>
   </div>
 </div>
