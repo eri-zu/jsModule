@@ -56,6 +56,8 @@ export default class Controller extends Base {
       ? $targetPosEle.offset().top - this.buffa
       : $targetPosEle.offset().top;
 
+    console.log(targetTop, "targetTop");
+
     gsap.to(this.$html, 1, {
       scrollTop: targetTop,
       ease: "power4.out",
