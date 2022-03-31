@@ -12,8 +12,20 @@
     <div id="wrapper" class="id_<%- page %>">
       <div id="inner">
         <%- include(rootPATH + 'parts/common/_header', {PATH: PATH}); %> 
+
         <div class="section"></div>
-        <%- include(contentsPATH + '_section01', {page:page, PATH: PATH}); %> 
+
+        <!-- video open ボタン -->
+        <div class="section01">
+          <div class="section01__btnarea">
+            <div class="btnwrap js-videomodal_openbtn">
+              <div class="btn01">
+                <div class="btn01__txt">日本語</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <%- include(rootPATH + 'parts/common/_footer', {PATH: PATH}); %>
       </div>
 
