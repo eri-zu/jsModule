@@ -1,0 +1,33 @@
+<!-- ************************************************************
+//  section01
+// ************************************************************ -->
+<!-- prettier-ignore -->
+<div class="section section01">
+  <div class="slider js-slider">
+    <div class="slider__inner">
+      <ul class="slider__list">
+        <% for(let i = 0; i < 5;i ++) { %>
+        <li class="slider__item js-slider_item">
+          <p class="slider__img">
+            <img src="./assets/resource/img/<%= i + 1%>.jpg" alt="" />
+          </p>
+        </li>
+        <% } %>
+        <div class="slider__arrow -left">
+          <div class="svgwrap js-slider_arrow_left">
+            <%-include('../../../../dist/assets/resource/img/arrow_left.svg')%>
+          </div>
+        </div>
+        <div class="slider__arrow -right">
+          <div class="svgwrap js-slider_arrow_right">
+            <%-include('../../../../dist/assets/resource/img/arrow_right.svg')%>
+          </div>
+        </div>
+      </ul>
+      <div class="slider__indicator js-slider_indicator">
+        <ul class="slider__indicator-list js-slider_indicator_wrap">
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
