@@ -519,7 +519,7 @@ img {
   }
 }
 
-.videomodal__videoarea video {
+.videomodal__videoarea iframe {
   top: 0;
   left: 0;
   width: 100%;

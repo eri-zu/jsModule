@@ -17,11 +17,10 @@ export default class Controller extends Base {
     this.isREv = true;
 
     this.$modal = $(".js-videomodal");
+    this.$bg = this.$modal.find(".js-videomodal_bg");
     this.$openbtn = $(".js-videomodal_openbtn");
     this.$closebtn = this.$modal.find(".js-videomodal_close");
     this.video = document.querySelector(".js-videomodal video");
-
-    this.isAppend = false;
 
     this.disableScroll = (e) => {
       e.preventDefault();
@@ -35,24 +34,7 @@ export default class Controller extends Base {
     this.renderer = new Renderer(this.$closebtn, this.$modal);
   }
 
-  appendVideo() {
-    // 初回読み込み時カクつくので
-    this.delay = this.isAppend ? 0 : 0.3;
-
-    if (this.isAppend) return;
-    this.isAppend = true;
-
-    const src =
-      UAParser().device.type !== "mobile"
-        ? this.video.dataset.srcpc
-        : this.video.dataset.srcsp;
-
-    this.video.src = src;
-  }
-
   show() {
-    this.appendVideo();
-
     this.$modal.css("pointer-events", "auto");
 
     this.tl = gsap.timeline();
@@ -66,10 +48,6 @@ export default class Controller extends Base {
       }, this.delay)
       // show
       .add(this.renderer.show(), this.delay);
-    // video再生
-    // .add(() => {
-    //   this.video.play();
-    // });
   }
 
   hide() {
@@ -80,20 +58,12 @@ export default class Controller extends Base {
     this.tl = gsap.timeline();
 
     this.tl
-      // videoストップ
-      .add(() => {
-        this.video.pause();
-      })
       // スクロール禁止解除
       .add(() => {
         this.cancelScrollStop();
       })
       // hide
-      .add(this.renderer.hide())
-      // video resest
-      .add(() => {
-        this.video.load();
-      });
+      .add(this.renderer.hide());
   }
 
   scrollStop() {
@@ -131,13 +101,17 @@ export default class Controller extends Base {
 
     this.$openbtn.on("click" + "." + this.name, () => {
       this.show();
-
-      setTimeout(() => {
-        this.video.play();
-      }, 1.0 + this.delay);
     });
 
     this.$closebtn.on("click" + "." + this.name, () => {
+      this.hide();
+    });
+
+    this.$modal.on("click" + "." + this.name, (e) => {
+      e.stopPropagation();
+    });
+
+    this.$bg.on("click" + "." + this.name, () => {
       this.hide();
     });
 

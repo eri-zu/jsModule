@@ -11,6 +11,7 @@ import gsap from "gsap";
 import { CustomEase } from "@BALANCeLibs/View/gsap/CustomEase/CustomEase.js";
 import { Conf } from "@/Conf";
 import VideoModal from "./VideoModal/Controller";
+import Youtube from "./Youtube/Controller";
 
 export default class Controller extends Base {
   constructor() {
@@ -21,6 +22,7 @@ export default class Controller extends Base {
   }
 
   setup() {
+    gb.youtube = new Youtube();
     new VideoModal();
   }
 
