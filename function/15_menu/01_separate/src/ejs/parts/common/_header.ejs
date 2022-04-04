@@ -1,0 +1,72 @@
+<!-- ************************************************************
+//
+//  header
+//
+// ************************************************************ -->
+<!-- prettier-ignore -->
+<% 
+  const menus = [
+    {
+      id: 0,
+      name: "ニュース",
+      href: "#news"
+    }, 
+    {
+      id: 1,
+      name: "映画祭について",
+      href: "#about"
+    }, 
+    {
+      id: 2,
+      name: "上映作品",
+      href: "#theater"
+    }, 
+    {
+      id: 3,
+      name: "お問い合わせ",
+      href: "#contact"
+    }, 
+  ];  
+%>
+
+<div class="menubtnwrap">
+  <div class="menubtn js-menubtn">
+    <div class="menubtn__inner open js-menu_btnin__open">
+      <div class="menubtn__bar js-menu_btnin__bar"></div>
+      <div class="menubtn__bar js-menu_btnin__bar"></div>
+      <div class="menubtn__bar js-menu_btnin__bar"></div>
+    </div>
+
+    <div class="menubtn__inner close js-menu_btnin__close">
+      <div class="menubtn__bar-wrap js-menu_btnin__bar_wrap">
+        <div class="menubtn__bar js-menu_btnin__bar"></div>
+      </div>
+      <div class="menubtn__bar-wrap js-menu_btnin__bar_wrap"></div>
+      <div class="menubtn__bar-wrap js-menu_btnin__bar_wrap">
+        <div class="menubtn__bar js-menu_btnin__bar"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="drawer js-drawer">
+  <div class="drawer__bg js-drawer_bg"></div>
+  <div class="drawer__inner">
+    <div class="drawer__nav">
+      <div class="nav">
+        <ul class="nav__list">
+          <% for (let i = 0; i < 4; i++) { %>
+          <li class="nav__item">
+            <a
+              class="js-drawer_item_link js-drawer_hiddenitem"
+              href="<%= menus[i].href %>"
+            >
+              <span class="nav__item-txt"><%= menus[i].name %></span>
+            </a>
+          </li>
+          <%} %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
