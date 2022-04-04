@@ -1,0 +1,37 @@
+<% var rootPATH = '../', contentsPATH = './top/', PATH = './', page = 'top'; %>
+
+<!DOCTYPE html>
+<!-- prettier-ignore -->
+<html lang="ja" class="htmlTop">
+  <head>
+    <%- include(rootPATH + 'inc/_meta', {data:data, meta:data['common']}); %>
+    <link href="<%- PATH %>assets/css/style.css" rel="stylesheet" />
+    <%- include(rootPATH + 'inc/_log'); %>
+  </head>
+  <body id="<%- page %>" class="">
+    <div id="wrapper" class="id_<%- page %>">
+      <div id="inner">
+        <%- include(rootPATH + 'parts/common/_header', {PATH: PATH}); %> 
+
+        <div class="section"></div>
+
+        <!-- video open ボタン -->
+        <div class="section01">
+          <div class="section01__btnarea">
+            <div class="btnwrap js-videomodal_openbtn">
+              <div class="btn01">
+                <div class="btn01__txt">日本語</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <%- include(rootPATH + 'parts/common/_footer', {PATH: PATH}); %>
+      </div>
+
+      <%- include(rootPATH + 'parts/common/_videomodal', {PATH: PATH}); %>
+    </div>
+
+    <%- include(rootPATH + 'inc/_script', {PATH: PATH}); %>
+  </body>
+</html>

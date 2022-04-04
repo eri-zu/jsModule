@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+/* --------------------------------------------------------------------------------
+*
+*   section01
+*
+-------------------------------------------------------------------------------- */
+.section {
+  height: 500vh;
+}
+
+.section01 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section01__btnarea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnwrap {
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+
+  &:nth-child(n + 2) {
+    margin-left: 20px;
+  }
+}
