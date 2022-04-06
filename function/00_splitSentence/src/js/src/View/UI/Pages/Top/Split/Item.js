@@ -45,7 +45,7 @@ export default class Controller extends Base {
     }
 
     // 配列をbr追加して連結
-    const newitem = span.join("<br>");
+    const newitem = span.join("<br>"); // join：指定文字列で配列の中身を連結して新たな文字列作成
 
     // 連結したやつでhtml書き換え
     item.innerHTML = newitem;
