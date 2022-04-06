@@ -1,0 +1,48 @@
+<% var rootPATH = '../', contentsPATH = './top/', PATH = './', page = 'top'; %>
+
+<!DOCTYPE html>
+<!-- prettier-ignore -->
+<html lang="ja" class="htmlTop">
+  <head>
+    <%- include(rootPATH + 'inc/_meta', {data:data, meta:data['common']}); %>
+    <link href="<%- PATH %>assets/css/style.css" rel="stylesheet" />
+    <%- include(rootPATH + 'inc/_log'); %>
+    <script type="text/javascript" src="/common/js/bc/import.js"></script>
+  </head>
+  <body id="<%- page %>" class="">
+    <div id="wrapper" class="id_<%- page %>">
+      <div id="inner">
+        <%- include(rootPATH + 'parts/common/_header', {PATH: PATH}); %> 
+
+        <div class="section">
+
+          <div id="videoarea"></div>
+
+          <div class="section01__btnarea">
+            <div class="btnwrap js-videomodal_openbtn" onclick="bcPlayer.setMovie('videoarea','meiji-r1_SponsoringOurHeroes_other','640','360','true');">
+              <div class="btn01">
+                <div class="btn01__txt">ボタン</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- video open ボタン -->
+        <div class="section01">
+
+        </div>
+
+    
+
+        <%- include(rootPATH + 'parts/common/_footer', {PATH: PATH}); %>
+      </div>
+
+      <%- include(rootPATH + 'parts/common/_videomodal', {PATH: PATH}); %>
+    </div>
+
+    <%- include(rootPATH + 'inc/_script', {PATH: PATH}); %>
+    <!-- <script>
+      bcPlayer.setMovie('videoarea ','meiji-r1_SponsoringOurHeroes_other','640','360','true');
+    </script> -->
+  </body>
+</html>
