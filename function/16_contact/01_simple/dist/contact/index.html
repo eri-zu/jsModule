@@ -59,7 +59,6 @@
   <!-- ************************************************************
 //  section01
 // ************************************************************ -->
-
 <!-- prettier-ignore -->
 
 
@@ -76,104 +75,141 @@
         <div class="form__inner">
           <!-- list -->
           <ul class="form__list">
+            <!-- input -->
+            
             <li class="form__item">
-              <p class="form__item-title">氏名*</p>
-              <div class="form__item-input">
-                <div class="form__item-input-in">
-                  <div class="form__item-input-bg js-form_inputbg"></div>
+              <div class="form__titlearea">
+                <p class="form__title">氏名*</p>
+              </div>
+              <div class="form__inputarea">
+                <div class="form__inputarea-inner">
+                  <div class="form__inputarea-bg js-form_inputbg"></div>
                   <input
                     class="js-form_input"
+                    id="name"
+                    name="name"
                     type="text"
                     value=""
                     placeholder="山田 太郎"
-                    id="name"
+                    data-regex="false"
                   />
                 </div>
               </div>
             </li>
+            
             <li class="form__item">
-              <p class="form__item-title">フリガナ*</p>
-              <div class="form__item-input">
-                <div class="form__item-input-in">
-                  <div class="form__item-input-bg js-form_inputbg"></div>
+              <div class="form__titlearea">
+                <p class="form__title">フリガナ*</p>
+              </div>
+              <div class="form__inputarea">
+                <div class="form__inputarea-inner">
+                  <div class="form__inputarea-bg js-form_inputbg"></div>
                   <input
                     class="js-form_input"
+                    id="furigana"
+                    name="furigana"
                     type="text"
                     value=""
                     placeholder="ヤマダ タロウ"
-                    id="furigana"
+                    data-regex="false"
                   />
                 </div>
               </div>
             </li>
+            
             <li class="form__item">
-              <p class="form__item-title">会社名*</p>
-              <div class="form__item-input">
-                <div class="form__item-input-in">
-                  <div class="form__item-input-bg js-form_inputbg"></div>
+              <div class="form__titlearea">
+                <p class="form__title">会社名*</p>
+              </div>
+              <div class="form__inputarea">
+                <div class="form__inputarea-inner">
+                  <div class="form__inputarea-bg js-form_inputbg"></div>
                   <input
                     class="js-form_input"
-                    type="text"
-                    value=""
                     id="company"
-                  />
-                </div>
-              </div>
-            </li>
-            <li class="form__item">
-              <p class="form__item-title">役職*</p>
-              <div class="form__item-input">
-                <div class="form__item-input-in">
-                  <div class="form__item-input-bg js-form_inputbg"></div>
-                  <input
-                    class="js-form_input"
+                    name="company"
                     type="text"
                     value=""
-                    id="title"
+                    placeholder="株式会社BALANCe"
+                    data-regex="false"
                   />
                 </div>
               </div>
             </li>
+            
             <li class="form__item">
-              <p class="form__item-title">メールアドレス*</p>
-              <div class="form__item-input">
-                <div class="form__item-input-in">
-                  <div class="form__item-input-bg js-form_inputbg"></div>
+              <div class="form__titlearea">
+                <p class="form__title">役職*</p>
+              </div>
+              <div class="form__inputarea">
+                <div class="form__inputarea-inner">
+                  <div class="form__inputarea-bg js-form_inputbg"></div>
                   <input
                     class="js-form_input"
+                    id="title"
+                    name="title"
+                    type="text"
+                    value=""
+                    placeholder=""
+                    data-regex="false"
+                  />
+                </div>
+              </div>
+            </li>
+            
+            <li class="form__item">
+              <div class="form__titlearea">
+                <p class="form__title">メールアドレス*</p>
+              </div>
+              <div class="form__inputarea">
+                <div class="form__inputarea-inner">
+                  <div class="form__inputarea-bg js-form_inputbg"></div>
+                  <input
+                    class="js-form_input"
+                    id="email"
+                    name="email"
                     type="email"
                     value=""
                     placeholder="sample@gmail.com"
-                    id="email"
                     data-regex="true"
                   />
                 </div>
               </div>
             </li>
+            
             <li class="form__item">
-              <p class="form__item-title">電話番号*</p>
-              <div class="form__item-input">
-                <div class="form__item-input-in">
-                  <div class="form__item-input-bg js-form_inputbg"></div>
+              <div class="form__titlearea">
+                <p class="form__title">電話番号*</p>
+              </div>
+              <div class="form__inputarea">
+                <div class="form__inputarea-inner">
+                  <div class="form__inputarea-bg js-form_inputbg"></div>
                   <input
                     class="js-form_input"
+                    id="tel"
+                    name="tel"
                     type="tel"
                     value=""
-                    id="tel"
+                    placeholder="山田 太郎"
                     data-regex="true"
                   />
                 </div>
               </div>
             </li>
+            
+            <!-- txtarea -->
             <li class="form__item">
-              <p class="form__item-title">お問い合わせ内容*</p>
-              <div class="form__item-input">
-                <div class="form__item-input-in">
-                  <div class="form__item-input-bg js-form_inputbg"></div>
+              <div class="form__titlearea">
+                <p class="form__title">お問い合わせ内容*</p>
+              </div>
+
+              <div class="form__inputarea">
+                <div class="form__inputarea-inner">
+                  <div class="form__inputarea-bg js-form_inputbg"></div>
                   <textarea
                     class="js-form_input"
-                    name=""
                     id="txtarea"
+                    name="contents"
                     cols="30"
                     rows="10"
                     value=""
@@ -208,12 +244,10 @@
           </div>
         </div>
 
-        <!-- errormessage -->
-        <div class="form__errormessageArea">
-          <p class="form__errormessageArea-txt js-form_errormessage">
-            ※正しく入力されていない項目があります。<br
-              class="is-sp"
-            />メッセージをご確認の上、もう一度ご入力下さい。
+        <!-- errorarea -->
+        <div class="form__errorarea">
+          <p class="form__errortxt js-form_errormessage">
+            ※正しく入力されていない項目があります。<br />メッセージをご確認の上、もう一度ご入力下さい。
           </p>
         </div>
 
@@ -227,15 +261,10 @@
                   <div class="btn01__txtarea">
                     <span class="btn01__txt js-btn01_txt">入力内容を確認</span>
                   </div>
-                  <div class="btn01__txtarea">
-                    <span class="btn01__txt js-btn01_txt">入力内容を確認</span>
-                  </div>
                 </div>
               </div>
               <span class="btn01__bg js-btn01_bg"></span>
             </a>
-            <span class="btn01__bar01 js-btn01_bar01"></span>
-            <span class="btn01__bar02 js-btn01_bar02"></span>
           </div>
         </div>
       </form>

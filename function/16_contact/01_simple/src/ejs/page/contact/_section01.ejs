@@ -1,18 +1,56 @@
 <!-- ************************************************************
 //  section01
 // ************************************************************ -->
-
 <!-- prettier-ignore -->
 <%  
-  const step = [
+  const data = [
     {
-      txt: "入力"
+      title: "氏名*",
+      type: "text",
+      value: "",
+      placeholder: "山田 太郎",
+      id: "name",
+      dataRegex: "false"
     },
     {
-      txt: "確認"
+      title: "フリガナ*",
+      type: "text",
+      value: "",
+      placeholder: "ヤマダ タロウ",
+      id: "furigana",
+      dataRegex: "false"
     },
     {
-      txt: "完了"
+      title: "会社名*",
+      type: "text",
+      value: "",
+      placeholder: "株式会社BALANCe",
+      id: "company",
+      dataRegex: "false"
+    },
+    {
+      title: "役職*",
+      type: "text",
+      value: "",
+      placeholder: "",
+      id: "title",
+      dataRegex: "false"
+    },
+    {
+      title: "メールアドレス*",
+      type: "email",
+      value: "",
+      placeholder: "sample@gmail.com",
+      id: "email",
+      dataRegex: "true"
+    },
+    {
+      title: "電話番号*",
+      type: "tel",
+      value: "",
+      placeholder: "山田 太郎",
+      id: "tel",
+      dataRegex: "true"
     },
   ]
 %>
@@ -30,104 +68,41 @@
         <div class="form__inner">
           <!-- list -->
           <ul class="form__list">
+            <!-- input -->
+            <% for (let i = 0; i < data.length; i++) { %>
             <li class="form__item">
-              <p class="form__item-title">氏名*</p>
-              <div class="form__item-input">
-                <div class="form__item-input-in">
-                  <div class="form__item-input-bg js-form_inputbg"></div>
+              <div class="form__titlearea">
+                <p class="form__title"><%= data[i].title %></p>
+              </div>
+              <div class="form__inputarea">
+                <div class="form__inputarea-inner">
+                  <div class="form__inputarea-bg js-form_inputbg"></div>
                   <input
                     class="js-form_input"
-                    type="text"
-                    value=""
-                    placeholder="山田 太郎"
-                    id="name"
+                    id="<%= data[i].id %>"
+                    name="<%= data[i].id %>"
+                    type="<%= data[i].type %>"
+                    value="<%= data[i].value %>"
+                    placeholder="<%= data[i].placeholder %>"
+                    data-regex="<%= data[i].dataRegex %>"
                   />
                 </div>
               </div>
             </li>
+            <%}%>
+            <!-- txtarea -->
             <li class="form__item">
-              <p class="form__item-title">フリガナ*</p>
-              <div class="form__item-input">
-                <div class="form__item-input-in">
-                  <div class="form__item-input-bg js-form_inputbg"></div>
-                  <input
-                    class="js-form_input"
-                    type="text"
-                    value=""
-                    placeholder="ヤマダ タロウ"
-                    id="furigana"
-                  />
-                </div>
+              <div class="form__titlearea">
+                <p class="form__title">お問い合わせ内容*</p>
               </div>
-            </li>
-            <li class="form__item">
-              <p class="form__item-title">会社名*</p>
-              <div class="form__item-input">
-                <div class="form__item-input-in">
-                  <div class="form__item-input-bg js-form_inputbg"></div>
-                  <input
-                    class="js-form_input"
-                    type="text"
-                    value=""
-                    id="company"
-                  />
-                </div>
-              </div>
-            </li>
-            <li class="form__item">
-              <p class="form__item-title">役職*</p>
-              <div class="form__item-input">
-                <div class="form__item-input-in">
-                  <div class="form__item-input-bg js-form_inputbg"></div>
-                  <input
-                    class="js-form_input"
-                    type="text"
-                    value=""
-                    id="title"
-                  />
-                </div>
-              </div>
-            </li>
-            <li class="form__item">
-              <p class="form__item-title">メールアドレス*</p>
-              <div class="form__item-input">
-                <div class="form__item-input-in">
-                  <div class="form__item-input-bg js-form_inputbg"></div>
-                  <input
-                    class="js-form_input"
-                    type="email"
-                    value=""
-                    placeholder="sample@gmail.com"
-                    id="email"
-                    data-regex="true"
-                  />
-                </div>
-              </div>
-            </li>
-            <li class="form__item">
-              <p class="form__item-title">電話番号*</p>
-              <div class="form__item-input">
-                <div class="form__item-input-in">
-                  <div class="form__item-input-bg js-form_inputbg"></div>
-                  <input
-                    class="js-form_input"
-                    type="tel"
-                    value=""
-                    id="tel"
-                    data-regex="true"
-                  />
-                </div>
-              </div>
-            </li>
-            <li class="form__item">
-              <p class="form__item-title">お問い合わせ内容*</p>
-              <div class="form__item-input">
-                <div class="form__item-input-in">
-                  <div class="form__item-input-bg js-form_inputbg"></div>
+
+              <div class="form__inputarea">
+                <div class="form__inputarea-inner">
+                  <div class="form__inputarea-bg js-form_inputbg"></div>
                   <textarea
                     class="js-form_input"
-                    name=""
                     id="txtarea"
+                    name="contents"
                     cols="30"
                     rows="10"
                     value=""
@@ -162,12 +137,10 @@
           </div>
         </div>
 
-        <!-- errormessage -->
-        <div class="form__errormessageArea">
-          <p class="form__errormessageArea-txt js-form_errormessage">
-            ※正しく入力されていない項目があります。<br
-              class="is-sp"
-            />メッセージをご確認の上、もう一度ご入力下さい。
+        <!-- errorarea -->
+        <div class="form__errorarea">
+          <p class="form__errortxt js-form_errormessage">
+            ※正しく入力されていない項目があります。<br />メッセージをご確認の上、もう一度ご入力下さい。
           </p>
         </div>
 
@@ -181,15 +154,10 @@
                   <div class="btn01__txtarea">
                     <span class="btn01__txt js-btn01_txt">入力内容を確認</span>
                   </div>
-                  <div class="btn01__txtarea">
-                    <span class="btn01__txt js-btn01_txt">入力内容を確認</span>
-                  </div>
                 </div>
               </div>
               <span class="btn01__bg js-btn01_bg"></span>
             </a>
-            <span class="btn01__bar01 js-btn01_bar01"></span>
-            <span class="btn01__bar02 js-btn01_bar02"></span>
           </div>
         </div>
       </form>

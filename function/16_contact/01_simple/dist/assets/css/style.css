@@ -1470,87 +1470,100 @@ a:active {
   }
 }
 
-#wrapper.id_contact .form__item-title,
-#wrapper.id_contact_confirm .form__item-title,
-#wrapper.id_done .form__item-title {
-  font-weight: 500;
-  padding-top: 16px;
-  font-size: 16px;
-  line-height: lh(30, 16);
+#wrapper.id_contact .form__titlearea,
+#wrapper.id_contact_confirm .form__titlearea,
+#wrapper.id_done .form__titlearea {
+  margin-right: 15px;
   min-width: 150px;
   max-width: 150px;
   text-align: right;
-  margin-right: 15px;
+  padding-top: 16px;
 }
 
 @media only screen and (max-width: 768px) {
-  #wrapper.id_contact .form__item-title,
-  #wrapper.id_contact_confirm .form__item-title,
-  #wrapper.id_done .form__item-title {
+  #wrapper.id_contact .form__titlearea,
+  #wrapper.id_contact_confirm .form__titlearea,
+  #wrapper.id_done .form__titlearea {
     text-align: left;
     padding-top: 0;
+  }
+}
+
+#wrapper.id_contact .form__title,
+#wrapper.id_contact_confirm .form__title,
+#wrapper.id_done .form__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: lh(30, 16);
+}
+
+@media only screen and (max-width: 768px) {
+  #wrapper.id_contact .form__title,
+  #wrapper.id_contact_confirm .form__title,
+  #wrapper.id_done .form__title {
     font-size: 14px;
   }
 }
 
-#wrapper.id_contact .form__item-input,
-#wrapper.id_contact_confirm .form__item-input,
-#wrapper.id_done .form__item-input {
+#wrapper.id_contact .form__inputarea,
+#wrapper.id_contact_confirm .form__inputarea,
+#wrapper.id_done .form__inputarea {
   flex-grow: 1;
 }
 
 @media only screen and (max-width: 768px) {
-  #wrapper.id_contact .form__item-input,
-  #wrapper.id_contact_confirm .form__item-input,
-  #wrapper.id_done .form__item-input {
+  #wrapper.id_contact .form__inputarea,
+  #wrapper.id_contact_confirm .form__inputarea,
+  #wrapper.id_done .form__inputarea {
     width: 100%;
     margin-top: 8px;
     font-size: 14px;
   }
 }
 
-#wrapper.id_contact .form__item-input input,
-#wrapper.id_contact_confirm .form__item-input input,
-#wrapper.id_done .form__item-input input {
-  width: 100%;
-  height: 100%;
-  color: #003c0e;
-}
-
-#wrapper.id_contact .form__item-input input::placeholder,
-#wrapper.id_contact_confirm .form__item-input input::placeholder,
-#wrapper.id_done .form__item-input input::placeholder {
-  color: rgba(0, 0, 0, 0.5);
-}
-
-#wrapper.id_contact .form__item-input textarea,
-#wrapper.id_contact_confirm .form__item-input textarea,
-#wrapper.id_done .form__item-input textarea {
-  width: 100%;
-  height: 100%;
-  color: #003c0e;
-}
-
-#wrapper.id_contact .form__item-input textarea::placeholder,
-#wrapper.id_contact_confirm .form__item-input textarea::placeholder,
-#wrapper.id_done .form__item-input textarea::placeholder {
-  color: rgba(0, 0, 0, 0.5);
-}
-
-#wrapper.id_contact .form__item-input-in,
-#wrapper.id_contact_confirm .form__item-input-in,
-#wrapper.id_done .form__item-input-in {
+#wrapper.id_contact .form__inputarea-inner,
+#wrapper.id_contact_confirm .form__inputarea-inner,
+#wrapper.id_done .form__inputarea-inner {
   padding: 18px;
   z-index: 1;
   font-size: 18px;
   position: relative;
   font-weight: 500;
   line-height: lh(30, 18);
+  width: 100%;
 }
 
-#wrapper.id_contact .form__item-input-bg,
-#wrapper.id_contact_confirm .form__item-input-bg,
-#wrapper.id_done .form__item-input-bg {
+#wrapper.id_contact .form__inputarea-inner input,
+#wrapper.id_contact_confirm .form__inputarea-inner input,
+#wrapper.id_done .form__inputarea-inner input {
+  width: 100%;
+  height: 100%;
+  color: #003c0e;
+}
+
+#wrapper.id_contact .form__inputarea-inner input::placeholder,
+#wrapper.id_contact_confirm .form__inputarea-inner input::placeholder,
+#wrapper.id_done .form__inputarea-inner input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#wrapper.id_contact .form__inputarea-inner textarea,
+#wrapper.id_contact_confirm .form__inputarea-inner textarea,
+#wrapper.id_done .form__inputarea-inner textarea {
+  width: 100%;
+  height: 100%;
+  color: #003c0e;
+}
+
+#wrapper.id_contact .form__inputarea-inner textarea::placeholder,
+#wrapper.id_contact_confirm .form__inputarea-inner textarea::placeholder,
+#wrapper.id_done .form__inputarea-inner textarea::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#wrapper.id_contact .form__inputarea-bg,
+#wrapper.id_contact_confirm .form__inputarea-bg,
+#wrapper.id_done .form__inputarea-bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -1561,9 +1574,9 @@ a:active {
   z-index: -1;
 }
 
-#wrapper.id_contact .form__item-input-bg.is-error,
-#wrapper.id_contact_confirm .form__item-input-bg.is-error,
-#wrapper.id_done .form__item-input-bg.is-error {
+#wrapper.id_contact .form__inputarea-bg.is-error,
+#wrapper.id_contact_confirm .form__inputarea-bg.is-error,
+#wrapper.id_done .form__inputarea-bg.is-error {
   background-color: #ff9797;
 }
 
@@ -1661,6 +1674,38 @@ a:active {
   background-color: #003c0e;
 }
 
+#wrapper.id_contact .form__errorarea,
+#wrapper.id_contact_confirm .form__errorarea,
+#wrapper.id_done .form__errorarea {
+  margin-top: 30px;
+}
+
+#wrapper.id_contact .form__errortxt,
+#wrapper.id_contact_confirm .form__errortxt,
+#wrapper.id_done .form__errortxt {
+  text-align: center;
+  color: #ff0000;
+  font-size: 16px;
+  line-height: lh(30, 16);
+  font-weight: 500;
+  opacity: 0;
+}
+
+#wrapper.id_contact .form__errortxt.is-active,
+#wrapper.id_contact_confirm .form__errortxt.is-active,
+#wrapper.id_done .form__errortxt.is-active {
+  opacity: 1;
+}
+
+#wrapper.id_contact .error-msg,
+#wrapper.id_contact_confirm .error-msg,
+#wrapper.id_done .error-msg {
+  color: #003c0e;
+  font-size: 12px;
+  padding-left: 18px;
+  padding-top: 10px;
+}
+
 #wrapper.id_contact .form__btnarea,
 #wrapper.id_contact_confirm .form__btnarea,
 #wrapper.id_done .form__btnarea {
@@ -1749,38 +1794,6 @@ a:active {
   margin-top: -0.5px;
   right: -10px;
   background-color: #003c0e;
-}
-
-#wrapper.id_contact .form__errormessageArea,
-#wrapper.id_contact_confirm .form__errormessageArea,
-#wrapper.id_done .form__errormessageArea {
-  margin-top: 30px;
-}
-
-#wrapper.id_contact .form__errormessageArea-txt,
-#wrapper.id_contact_confirm .form__errormessageArea-txt,
-#wrapper.id_done .form__errormessageArea-txt {
-  text-align: center;
-  color: #ff0000;
-  font-size: 16px;
-  line-height: lh(30, 16);
-  font-weight: 500;
-  opacity: 0;
-}
-
-#wrapper.id_contact .form__errormessageArea-txt.is-active,
-#wrapper.id_contact_confirm .form__errormessageArea-txt.is-active,
-#wrapper.id_done .form__errormessageArea-txt.is-active {
-  opacity: 1;
-}
-
-#wrapper.id_contact .error-msg,
-#wrapper.id_contact_confirm .error-msg,
-#wrapper.id_done .error-msg {
-  color: #003c0e;
-  font-size: 12px;
-  padding-left: 18px;
-  padding-top: 10px;
 }
 
 .demoSvg {
