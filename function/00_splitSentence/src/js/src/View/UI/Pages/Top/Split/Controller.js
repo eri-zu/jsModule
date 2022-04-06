@@ -21,7 +21,7 @@ export default class Controller extends Base {
 
   setup() {
     for (let i = 0; i < this.items.length; i++) {
-      this.item = new Item(this.items[i]);
+      this.item = new Item(this.items[i], i);
     }
   }
 

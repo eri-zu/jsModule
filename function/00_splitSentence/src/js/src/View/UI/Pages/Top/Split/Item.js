@@ -10,9 +10,10 @@ import gsap from "gsap";
 import ScrollShow from "./ScrollShow/Controller";
 
 export default class Controller extends Base {
-  constructor(item) {
+  constructor(item, index) {
     super();
     this.item = item;
+    this.index = index;
 
     this.setup();
     this.setEvents();
@@ -44,10 +45,18 @@ export default class Controller extends Base {
       );
     }
 
+    console.log(span, this.index);
+
     // 配列をbr追加して連結
+    // idnex == 0 => [0]
+    // idnex == 1 => [1]
+    // idnex == 2 => [2]
+    // idnex == 4 => [3]
+
     const newitem = span.join("<br>"); // join：指定文字列で配列の中身を連結して新たな文字列作成
 
     // 連結したやつでhtml書き換え
+    // item.innerHTML = newitem;
     item.innerHTML = newitem;
   }
 

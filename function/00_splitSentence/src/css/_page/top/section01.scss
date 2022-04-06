@@ -14,6 +14,28 @@
   padding-bottom: 80vh;
 }
 
+.section02__txtarea {
+  margin-top: 30px;
+
+  @include media-max("sp") {
+    margin-left: 2.5px;
+    margin-top: 22px;
+  }
+}
+
+.section02__title {
+  color: #fff;
+  font-size: 44px;
+  line-height: 1;
+  letter-spacing: 0.01em;
+
+  @include media-max("sp") {
+    font-size: 32.5px;
+    line-height: (100/65);
+    letter-spacing: 0.04em;
+  }
+}
+
 .section02__txtwrap {
   &:nth-child(n + 2) {
     margin-top: 40px;

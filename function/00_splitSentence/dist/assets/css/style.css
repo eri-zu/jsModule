@@ -1157,6 +1157,32 @@ a:active {
   padding-bottom: 80vh;
 }
 
+#wrapper.id_top .section02__txtarea {
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  #wrapper.id_top .section02__txtarea {
+    margin-left: 2.5px;
+    margin-top: 22px;
+  }
+}
+
+#wrapper.id_top .section02__title {
+  color: #fff;
+  font-size: 44px;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+@media only screen and (max-width: 768px) {
+  #wrapper.id_top .section02__title {
+    font-size: 32.5px;
+    line-height: 1.53846;
+    letter-spacing: 0.04em;
+  }
+}
+
 #wrapper.id_top .section02__txtwrap:nth-child(n + 2) {
   margin-top: 40px;
 }
