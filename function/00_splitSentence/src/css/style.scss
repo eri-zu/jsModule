@@ -29,3 +29,14 @@
   right: 0;
   bottom: 0;
 }
+
+.is-sp {
+  @include media-min("tab") {
+    display: none !important;
+  }
+}
+.is-pc {
+  @include media-max("sp") {
+    display: none !important;
+  }
+}

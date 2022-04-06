@@ -5,19 +5,51 @@
 *   section01
 *
 -------------------------------------------------------------------------------- */
+
 .wrap {
   padding: 50px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding-top: 100vh;
+  padding-bottom: 80vh;
+}
 
-  @include max(768) {
-    padding: 30px;
+.section02__txtwrap {
+  &:nth-child(n + 2) {
+    margin-top: 40px;
+
+    @include media-max("sp") {
+      margin-top: 25px;
+    }
   }
 }
 
-.title {
-  font-size: 4rem;
-  font-weight: bold;
+.section02__txt {
+  color: #fff;
+  font-size: 18px;
+  // letter-spacing: 0.15em;
+  line-height: (40/18);
+  letter-spacing: -0.02em;
 
-  &:nth-child(n + 2) {
-    margin-top: 20px;
+  @include media-max("sp") {
+    font-size: 15.5px;
+    line-height: (72/31);
+    letter-spacing: -0.1em;
   }
+
+  span {
+    letter-spacing: 0.1em;
+
+    @include media-max("sp") {
+      letter-spacing: -0.03em;
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------------
+*   演出
+-------------------------------------------------------------------------------- */
+.js-show_item {
+  opacity: 0;
+  transform: translateY(20px);
 }

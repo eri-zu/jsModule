@@ -13,8 +13,7 @@ export default class Controller extends Base {
     super();
 
     // DOM
-    this.items = document.querySelectorAll(".js-show_item");
-    this.array = [];
+    this.items = document.querySelectorAll(".js-split");
 
     this.setup();
     this.setEvents();
@@ -23,7 +22,6 @@ export default class Controller extends Base {
   setup() {
     for (let i = 0; i < this.items.length; i++) {
       this.item = new Item(this.items[i]);
-      this.array.push(this.item);
     }
   }
 

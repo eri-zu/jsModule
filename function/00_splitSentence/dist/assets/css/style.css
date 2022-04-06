@@ -6,7 +6,7 @@
 *   text / font
 -------------------------------------------------------------------------------- */
 #loading .loadingPercent {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-style: normal;
   font-weight: 700;
 }
@@ -484,7 +484,7 @@ html {
   font-family: "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, "メイリオ", Arial, sans-serif;
   font-weight: 400;
   letter-spacing: 0.025em;
-  background-color: #fff;
+  background-color: #000;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   opacity: 1;
@@ -1144,25 +1144,57 @@ a:active {
 *   section01
 *
 -------------------------------------------------------------------------------- */
+  /* --------------------------------------------------------------------------------
+*   演出
+-------------------------------------------------------------------------------- */
 }
 
 #wrapper.id_top .wrap {
   padding: 50px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding-top: 100vh;
+  padding-bottom: 80vh;
 }
 
-@media (max-width: 768px) {
-  #wrapper.id_top .wrap {
-    padding: 30px;
+#wrapper.id_top .section02__txtwrap:nth-child(n + 2) {
+  margin-top: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+  #wrapper.id_top .section02__txtwrap:nth-child(n + 2) {
+    margin-top: 25px;
   }
 }
 
-#wrapper.id_top .title {
-  font-size: 4rem;
-  font-weight: bold;
+#wrapper.id_top .section02__txt {
+  color: #fff;
+  font-size: 18px;
+  line-height: 2.22222;
+  letter-spacing: -0.02em;
 }
 
-#wrapper.id_top .title:nth-child(n + 2) {
-  margin-top: 20px;
+@media only screen and (max-width: 768px) {
+  #wrapper.id_top .section02__txt {
+    font-size: 15.5px;
+    line-height: 2.32258;
+    letter-spacing: -0.1em;
+  }
+}
+
+#wrapper.id_top .section02__txt span {
+  letter-spacing: 0.1em;
+}
+
+@media only screen and (max-width: 768px) {
+  #wrapper.id_top .section02__txt span {
+    letter-spacing: -0.03em;
+  }
+}
+
+#wrapper.id_top .js-show_item {
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 .demoSvg {
@@ -1174,5 +1206,17 @@ a:active {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+@media only screen and (min-width: 769px) {
+  .is-sp {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .is-pc {
+    display: none !important;
+  }
 }
 /*# sourceMappingURL=maps/style.css.map */
