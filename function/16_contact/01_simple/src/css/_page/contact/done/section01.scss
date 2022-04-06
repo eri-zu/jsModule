@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------------
+*
+*   section01
+*
+-------------------------------------------------------------------------------- */
+
+.done__btnarea {
+  text-align: center;
+  margin-top: 50px;
+
+  @include media-max("sp") {
+    margin-top: 60px;
+  }
+}
+
+.done__btnwrap {
+  width: 310px;
+  height: 80px;
+  display: inline-block;
+  position: relative;
+
+  @include media-max("sp") {
+    width: 300px;
+    height: 75px;
+  }
+}

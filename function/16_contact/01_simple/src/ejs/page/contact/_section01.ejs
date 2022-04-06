@@ -1,0 +1,198 @@
+<!-- ************************************************************
+//  section01
+// ************************************************************ -->
+
+<!-- prettier-ignore -->
+<%  
+  const step = [
+    {
+      txt: "入力"
+    },
+    {
+      txt: "確認"
+    },
+    {
+      txt: "完了"
+    },
+  ]
+%>
+
+<div class="section01">
+  <div class="section01__inner">
+    <!-- title -->
+    <div class="section01__titlewrap">
+      <p class="section01__title">お問い合わせフォーム</p>
+    </div>
+
+    <!-- form -->
+    <div class="section01__form">
+      <form action="" class="form">
+        <div class="form__inner">
+          <!-- list -->
+          <ul class="form__list">
+            <li class="form__item">
+              <p class="form__item-title">氏名*</p>
+              <div class="form__item-input">
+                <div class="form__item-input-in">
+                  <div class="form__item-input-bg js-form_inputbg"></div>
+                  <input
+                    class="js-form_input"
+                    type="text"
+                    value=""
+                    placeholder="山田 太郎"
+                    id="name"
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="form__item">
+              <p class="form__item-title">フリガナ*</p>
+              <div class="form__item-input">
+                <div class="form__item-input-in">
+                  <div class="form__item-input-bg js-form_inputbg"></div>
+                  <input
+                    class="js-form_input"
+                    type="text"
+                    value=""
+                    placeholder="ヤマダ タロウ"
+                    id="furigana"
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="form__item">
+              <p class="form__item-title">会社名*</p>
+              <div class="form__item-input">
+                <div class="form__item-input-in">
+                  <div class="form__item-input-bg js-form_inputbg"></div>
+                  <input
+                    class="js-form_input"
+                    type="text"
+                    value=""
+                    id="company"
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="form__item">
+              <p class="form__item-title">役職*</p>
+              <div class="form__item-input">
+                <div class="form__item-input-in">
+                  <div class="form__item-input-bg js-form_inputbg"></div>
+                  <input
+                    class="js-form_input"
+                    type="text"
+                    value=""
+                    id="title"
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="form__item">
+              <p class="form__item-title">メールアドレス*</p>
+              <div class="form__item-input">
+                <div class="form__item-input-in">
+                  <div class="form__item-input-bg js-form_inputbg"></div>
+                  <input
+                    class="js-form_input"
+                    type="email"
+                    value=""
+                    placeholder="sample@gmail.com"
+                    id="email"
+                    data-regex="true"
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="form__item">
+              <p class="form__item-title">電話番号*</p>
+              <div class="form__item-input">
+                <div class="form__item-input-in">
+                  <div class="form__item-input-bg js-form_inputbg"></div>
+                  <input
+                    class="js-form_input"
+                    type="tel"
+                    value=""
+                    id="tel"
+                    data-regex="true"
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="form__item">
+              <p class="form__item-title">お問い合わせ内容*</p>
+              <div class="form__item-input">
+                <div class="form__item-input-in">
+                  <div class="form__item-input-bg js-form_inputbg"></div>
+                  <textarea
+                    class="js-form_input"
+                    name=""
+                    id="txtarea"
+                    cols="30"
+                    rows="10"
+                    value=""
+                    placeholder="お問い合わせ内容をご記入ください。"
+                  ></textarea>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <!-- checkbox -->
+          <div class="form__checkbox">
+            <div class="form__checkbox-labelwrap js-form_checkboxwrap">
+              <input
+                class="js-form_checkbox_input"
+                type="checkbox"
+                id="privacy"
+              />
+              <label class="js-form_checkbox" for="privacy">
+                <div class="form__checkbox-input"></div>
+                <div class="form__checkbox-txt">
+                  <a href="#" class="js-hoverline02_item">
+                    <span class="form__checkbox-txt-in"
+                      >プライバシポリシー<span
+                        class="form__checkbox-txt-bar js-hoverline02_line"
+                      ></span
+                    ></span> </a
+                  >に同意する
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- errormessage -->
+        <div class="form__errormessageArea">
+          <p class="form__errormessageArea-txt js-form_errormessage">
+            ※正しく入力されていない項目があります。<br
+              class="is-sp"
+            />メッセージをご確認の上、もう一度ご入力下さい。
+          </p>
+        </div>
+
+        <!-- btnarea -->
+        <div class="form__btnarea">
+          <div class="form__btnwrap js-btn01 js-formbtn">
+            <a href="" class="btn01">
+              <input type="submit" class="js-form_submitbtn" />
+              <div class="btn01__inner">
+                <div class="btn01__txtwrap js-btn01_txtwrap">
+                  <div class="btn01__txtarea">
+                    <span class="btn01__txt js-btn01_txt">入力内容を確認</span>
+                  </div>
+                  <div class="btn01__txtarea">
+                    <span class="btn01__txt js-btn01_txt">入力内容を確認</span>
+                  </div>
+                </div>
+              </div>
+              <span class="btn01__bg js-btn01_bg"></span>
+            </a>
+            <span class="btn01__bar01 js-btn01_bar01"></span>
+            <span class="btn01__bar02 js-btn01_bar02"></span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

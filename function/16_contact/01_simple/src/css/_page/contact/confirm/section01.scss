@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* --------------------------------------------------------------------------------
+*
+*   section01
+*
+-------------------------------------------------------------------------------- */
+
+.form {
+  &__item {
+    &-inputed {
+      flex-grow: 1;
+      padding: 18px 0px 18px 18px;
+      z-index: 1;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: lh(30, 18);
+      position: relative;
+      color: #000;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        // top: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #003c0e;
+        height: 1px;
+        width: 100%;
+        opacity: 0.3;
+      }
+
+      @include media-max("sp") {
+        width: 100%;
+        margin-top: 8px;
+        padding: 0px 0px 15px 0px;
+        font-size: 14px;
+      }
+    }
+
+    &:last-child {
+      .form__item-inputed {
+        padding: 18px 0px 44px 18px;
+
+        @include media-max("sp") {
+          padding: 18px 0px 44px 0px;
+        }
+      }
+    }
+  }
+}

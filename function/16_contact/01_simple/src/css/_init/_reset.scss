@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+/* image */
+img,
+/* block */
+div, p, blockquote,
+/* heading */
+h1, h2, h3, h4, h5, h6,
+/* list */
+ul, ol, li, dl, dt, dd,
+/* form */
+form, fieldset, textarea {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  // font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  list-style: none;
+}
+a {
+  cursor: pointer;
+}
+table {
+  font-size: 100%;
+}
+hr.separator {
+  display: none;
+}
+
+input[type="text"],
+button,
+select,
+textarea {
+  resize: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+select::-ms-expand {
+  display: none;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+
+  @keyframes onAutoFillStart {
+    from {
+    }
+    to {
+    }
+  }
+
+  &:-webkit-autofill {
+    // box-shadow: 0 0 0 1000px #fff inset;
+    // box-shadow: 0 0 0 1000px rgb(255, 255, 255) inset;
+    // background-color: #fff;
+    animation-name: onAutoFillStart;
+    transition: background-color 50000s ease-in-out 0s;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: none;
+}
+
+input[type="submit"],
+input[type="button"],
+label,
+button,
+select {
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+*::selection {
+  background-color: transparent;
+  // color: transparent;
+}
