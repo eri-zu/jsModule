@@ -15,24 +15,69 @@
         <%- include(rootPATH + 'parts/common/_header', {PATH: PATH}); %> 
 
         <div class="section">
-
           <div id="videoarea"></div>
 
           <div class="section01__btnarea">
-            <div class="btnwrap js-videomodal_openbtn" onclick="bcPlayer.setMovie('videoarea','meiji-r1_SponsoringOurHeroes_other','640','360','true');">
+            <div 
+              class="btnwrap js-videomodal_openbtn" 
+              onclick="bcPlayer.setMovie('videoarea','meiji-r1_SponsoringOurHeroes_other','640','360','true');"
+            >
               <div class="btn01">
                 <div class="btn01__txt">ボタン</div>
               </div>
             </div>
           </div>
+
+          <!-- 先方からもらったiframe -->
+          <iframe 
+            src="https://players.brightcove.net/xxxxxxx/default_default/index.html?videoId=xxxxxxx" allowfullscreen="" 
+            allow="encrypted-media" 
+            width="960" 
+            height="540"
+          ></iframe>
+
+          <!-- 先方からもらったvideo -->
+          <video 
+            class="video-js" 
+            data-account="xxxxxxx" 
+            data-player="default" 
+            data-embed="default" 
+            controls="" 
+            data-video-id="xxxxxxx" 
+            data-playlist-id="" 
+            data-application-id="" 
+            width="960" 
+            height="540">
+          </video>
+          <script src="https://players.brightcove.net/xxxxxxx/default_default/index.min.js"></script>
+
+          <!-- iframe（トラ） -->
+          <!-- <iframe 
+            src="https://players.brightcove.net/1752604059001/VJCJXL3Ye_default/index.html?videoId=4093643993001" allowfullscreen="" 
+            webkitallowfullscreen="" 
+            mozallowfullscreen="" 
+          ></iframe>
+          <script src="//players.brightcove.net/＊＊account＊＊/default_default/index.min.js"></script>  -->
+
+          <!-- サバンナ -->
+          <!-- <video-js 
+            id="myPlayerID"
+            data-playlist-id="4450721964001"
+            data-account="1752604059001"
+            data-player="opeki2sGq"
+            data-embed="default"
+            data-application-id
+            class="video-js"
+            autoplay
+            muted
+            controls
+          >
+          </video>
+          <script src="//players.brightcove.net/1752604059001/opeki2sGq_default/index.min.js"></script> -->
+         
         </div>
 
-        <!-- video open ボタン -->
-        <div class="section01">
-
-        </div>
-
-    
+  
 
         <%- include(rootPATH + 'parts/common/_footer', {PATH: PATH}); %>
       </div>
@@ -41,8 +86,6 @@
     </div>
 
     <%- include(rootPATH + 'inc/_script', {PATH: PATH}); %>
-    <!-- <script>
-      bcPlayer.setMovie('videoarea ','meiji-r1_SponsoringOurHeroes_other','640','360','true');
-    </script> -->
+
   </body>
 </html>

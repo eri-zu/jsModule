@@ -967,7 +967,7 @@ body.no-select {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color: #bbb;
   border-radius: 40px;
   position: relative;
   overflow: hidden;
@@ -978,65 +978,13 @@ body.no-select {
   font-weight: 700;
   font-size: 20px;
   line-height: 1;
-  color: #003c0e;
+  color: #fff;
 }
 
 @media only screen and (max-width: 768px) {
   .btn01__txt {
     font-size: 17px;
   }
-}
-
-.btn01__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10px;
-}
-
-.btn01__bar01, .btn01__bar02 {
-  position: absolute;
-  height: 1px;
-  top: 50%;
-  margin-top: -0.5px;
-  z-index: 2;
-}
-
-.btn01__bar01 {
-  right: 0;
-  width: 30px;
-  background-color: #003c0e;
-}
-
-.btn01__bar02 {
-  right: -10px;
-  width: 10px;
-  background-color: #003c0e;
-  transform-origin: 0% 50%;
-}
-
-.btn01__bg {
-  position: absolute;
-  right: 110%;
-  top: -50%;
-  border-radius: 0 50% 50% 0;
-  height: 200%;
-  width: 120%;
-  background-color: #003c0e;
-  z-index: 1;
-}
-
-.btn01__inner {
-  overflow: hidden;
-  height: 30px;
-  z-index: 2;
-  position: relative;
-}
-
-.btn01__txtarea {
-  display: flex;
-  align-items: center;
-  padding: 5px;
 }
 
 /* --------------------------------------------------------------------------------
@@ -1287,7 +1235,6 @@ a:active {
 #wrapper.id_contact,
 #wrapper.id_contact_confirm,
 #wrapper.id_done {
-  background-color: #ed63a4;
   /* --------------------------------------------------------------------------------
 *
 *   section01
@@ -1308,22 +1255,18 @@ a:active {
 -------------------------------------------------------------------------------- */
 }
 
-#wrapper.id_contact .form__item-inputed,
-#wrapper.id_contact_confirm .form__item-inputed,
-#wrapper.id_done .form__item-inputed {
+#wrapper.id_contact .form__item-inputedarea,
+#wrapper.id_contact_confirm .form__item-inputedarea,
+#wrapper.id_done .form__item-inputedarea {
   flex-grow: 1;
   padding: 18px 0px 18px 18px;
   z-index: 1;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: lh(30, 18);
   position: relative;
-  color: #000;
 }
 
-#wrapper.id_contact .form__item-inputed::before,
-#wrapper.id_contact_confirm .form__item-inputed::before,
-#wrapper.id_done .form__item-inputed::before {
+#wrapper.id_contact .form__item-inputedarea::before,
+#wrapper.id_contact_confirm .form__item-inputedarea::before,
+#wrapper.id_done .form__item-inputedarea::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -1336,61 +1279,57 @@ a:active {
 }
 
 @media only screen and (max-width: 768px) {
-  #wrapper.id_contact .form__item-inputed,
-  #wrapper.id_contact_confirm .form__item-inputed,
-  #wrapper.id_done .form__item-inputed {
+  #wrapper.id_contact .form__item-inputedarea,
+  #wrapper.id_contact_confirm .form__item-inputedarea,
+  #wrapper.id_done .form__item-inputedarea {
     width: 100%;
     margin-top: 8px;
     padding: 0px 0px 15px 0px;
-    font-size: 14px;
   }
 }
 
-#wrapper.id_contact .form__item:last-child .form__item-inputed,
-#wrapper.id_contact_confirm .form__item:last-child .form__item-inputed,
-#wrapper.id_done .form__item:last-child .form__item-inputed {
+#wrapper.id_contact .form__item-inputedarea.-contents,
+#wrapper.id_contact_confirm .form__item-inputedarea.-contents,
+#wrapper.id_done .form__item-inputedarea.-contents {
   padding: 18px 0px 44px 18px;
 }
 
 @media only screen and (max-width: 768px) {
-  #wrapper.id_contact .form__item:last-child .form__item-inputed,
-  #wrapper.id_contact_confirm .form__item:last-child .form__item-inputed,
-  #wrapper.id_done .form__item:last-child .form__item-inputed {
+  #wrapper.id_contact .form__item-inputedarea.-contents,
+  #wrapper.id_contact_confirm .form__item-inputedarea.-contents,
+  #wrapper.id_done .form__item-inputedarea.-contents {
     padding: 18px 0px 44px 0px;
   }
 }
 
-#wrapper.id_contact .done__btnarea,
-#wrapper.id_contact_confirm .done__btnarea,
-#wrapper.id_done .done__btnarea {
-  text-align: center;
+#wrapper.id_contact .form__item-inputedarea-txt,
+#wrapper.id_contact_confirm .form__item-inputedarea-txt,
+#wrapper.id_done .form__item-inputedarea-txt {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.66667;
+  color: #000;
+}
+
+@media only screen and (max-width: 768px) {
+  #wrapper.id_contact .form__item-inputedarea-txt,
+  #wrapper.id_contact_confirm .form__item-inputedarea-txt,
+  #wrapper.id_done .form__item-inputedarea-txt {
+    font-size: 14px;
+  }
+}
+
+#wrapper.id_contact .section01__donetxtarea,
+#wrapper.id_contact_confirm .section01__donetxtarea,
+#wrapper.id_done .section01__donetxtarea {
   margin-top: 50px;
 }
 
-@media only screen and (max-width: 768px) {
-  #wrapper.id_contact .done__btnarea,
-  #wrapper.id_contact_confirm .done__btnarea,
-  #wrapper.id_done .done__btnarea {
-    margin-top: 60px;
-  }
-}
-
-#wrapper.id_contact .done__btnwrap,
-#wrapper.id_contact_confirm .done__btnwrap,
-#wrapper.id_done .done__btnwrap {
-  width: 310px;
-  height: 80px;
-  display: inline-block;
-  position: relative;
-}
-
-@media only screen and (max-width: 768px) {
-  #wrapper.id_contact .done__btnwrap,
-  #wrapper.id_contact_confirm .done__btnwrap,
-  #wrapper.id_done .done__btnwrap {
-    width: 300px;
-    height: 75px;
-  }
+#wrapper.id_contact .section01__donetxt,
+#wrapper.id_contact_confirm .section01__donetxt,
+#wrapper.id_done .section01__donetxt {
+  text-align: center;
+  font-size: 16px;
 }
 
 #wrapper.id_contact .section01,
@@ -1415,7 +1354,7 @@ a:active {
 #wrapper.id_contact .section01__title,
 #wrapper.id_contact_confirm .section01__title,
 #wrapper.id_done .section01__title {
-  font-size: 38px;
+  font-size: 30px;
   font-weight: bold;
   line-height: 1;
   text-align: center;
@@ -1477,7 +1416,7 @@ a:active {
   min-width: 150px;
   max-width: 150px;
   text-align: right;
-  padding-top: 16px;
+  padding-top: 18px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1494,7 +1433,7 @@ a:active {
 #wrapper.id_done .form__title {
   font-weight: 500;
   font-size: 16px;
-  line-height: lh(30, 16);
+  line-height: 1.875;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1529,7 +1468,7 @@ a:active {
   font-size: 18px;
   position: relative;
   font-weight: 500;
-  line-height: lh(30, 18);
+  line-height: 1.66667;
   width: 100%;
 }
 
@@ -1569,8 +1508,7 @@ a:active {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #fff;
-  opacity: 0.5;
+  background-color: #f6f6f6;
   z-index: -1;
 }
 
@@ -1596,12 +1534,18 @@ a:active {
   position: relative;
 }
 
+#wrapper.id_contact .form__checkbox input[type="checkbox"]:checked + label .form__checkbox-input::before,
+#wrapper.id_contact_confirm .form__checkbox input[type="checkbox"]:checked + label .form__checkbox-input::before,
+#wrapper.id_done .form__checkbox input[type="checkbox"]:checked + label .form__checkbox-input::before {
+  display: block;
+}
+
 #wrapper.id_contact .form__checkbox-input,
 #wrapper.id_contact_confirm .form__checkbox-input,
 #wrapper.id_done .form__checkbox-input {
   width: 20px;
   height: 20px;
-  background-color: #fff;
+  background-color: #f6f6f6;
   position: relative;
 }
 
@@ -1627,12 +1571,6 @@ a:active {
   display: inline-block;
 }
 
-#wrapper.id_contact .form__checkbox input[type="checkbox"]:checked + label .form__checkbox-input::before,
-#wrapper.id_contact_confirm .form__checkbox input[type="checkbox"]:checked + label .form__checkbox-input::before,
-#wrapper.id_done .form__checkbox input[type="checkbox"]:checked + label .form__checkbox-input::before {
-  display: block;
-}
-
 #wrapper.id_contact .form__checkbox-txt,
 #wrapper.id_contact_confirm .form__checkbox-txt,
 #wrapper.id_done .form__checkbox-txt {
@@ -1654,24 +1592,8 @@ a:active {
 #wrapper.id_contact .form__checkbox-txt a,
 #wrapper.id_contact_confirm .form__checkbox-txt a,
 #wrapper.id_done .form__checkbox-txt a {
-  padding-bottom: 3px;
-}
-
-#wrapper.id_contact .form__checkbox-txt-in,
-#wrapper.id_contact_confirm .form__checkbox-txt-in,
-#wrapper.id_done .form__checkbox-txt-in {
-  position: relative;
-}
-
-#wrapper.id_contact .form__checkbox-txt-bar,
-#wrapper.id_contact_confirm .form__checkbox-txt-bar,
-#wrapper.id_done .form__checkbox-txt-bar {
-  width: 100%;
-  height: 1px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: #003c0e;
+  color: #003c0e;
+  text-decoration: underline;
 }
 
 #wrapper.id_contact .form__errorarea,
@@ -1729,14 +1651,18 @@ a:active {
   display: inline-block;
   position: relative;
   pointer-events: none;
-  opacity: 0.5;
 }
 
 #wrapper.id_contact .form__btnwrap.is-active,
 #wrapper.id_contact_confirm .form__btnwrap.is-active,
 #wrapper.id_done .form__btnwrap.is-active {
   pointer-events: auto;
-  opacity: 1;
+}
+
+#wrapper.id_contact .form__btnwrap.is-active .btn01,
+#wrapper.id_contact_confirm .form__btnwrap.is-active .btn01,
+#wrapper.id_done .form__btnwrap.is-active .btn01 {
+  background-color: #003c0e;
 }
 
 @media only screen and (max-width: 768px) {

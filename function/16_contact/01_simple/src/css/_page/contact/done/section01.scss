@@ -5,23 +5,11 @@
 *
 -------------------------------------------------------------------------------- */
 
-.done__btnarea {
-  text-align: center;
+.section01__donetxtarea {
   margin-top: 50px;
-
-  @include media-max("sp") {
-    margin-top: 60px;
-  }
 }
 
-.done__btnwrap {
-  width: 310px;
-  height: 80px;
-  display: inline-block;
-  position: relative;
-
-  @include media-max("sp") {
-    width: 300px;
-    height: 75px;
-  }
+.section01__donetxt {
+  text-align: center;
+  font-size: 16px;
 }

@@ -2,73 +2,27 @@
 //  section01
 // ************************************************************ -->
 
-<!-- prettier-ignore -->
-<%  
-  const step = [
-    {
-      txt: "入力"
-    },
-    {
-      txt: "確認"
-    },
-    {
-      txt: "完了"
-    },
-  ]
-%>
-
-<div class="section section01 js-sub_item_op">
+<div class="section01">
   <div class="section01__inner">
-    <div class="section01__form">
-      <div class="section01__box">
-        <!-- left -->
-        <div class="section01__left">
-          <div class="section01__title">FORM</div>
-        </div>
+    <!-- title -->
+    <div class="section01__titlewrap">
+      <p class="section01__title">お問い合わせフォーム</p>
+    </div>
 
-        <!-- right -->
-        <div class="section01__right">
-          <!-- step -->
-          <div class="contactstep">
-            <div class="contactstep__list">
-              <% for (let i = 0; i < step.length; i++) { if(i == 2) {%>
-              <div class="contactstep__item is-active pulse">
-                <% } else { %>
-                <div class="contactstep__item">
-                  <% } %>
-                  <span class="contactstep__item-txt"><%= step[i].txt %></span>
-                  <span class="contactstep__item-bg"></span>
-                </div>
-                <% } %>
-              </div>
-              <div class="contactstep__txt">
-                ご応募ありがとうございます。<br />
-                担当者より返信させていただきます。<br />
-                しばしお待ちください。
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="section01__donetxtarea">
+      <div class="section01__donetxt">
+        ご応募ありがとうございます。<br />
+        担当者より返信させていただきます。<br />
+        しばしお待ちください。
       </div>
     </div>
+
     <!-- btnarea -->
-    <div class="done__btnarea">
-      <div class="done__btnwrap js-btn01">
+    <div class="form__btnarea">
+      <div class="form__btnwrap is-active">
         <a href="/" class="btn01">
-          <div class="btn01__inner">
-            <div class="btn01__txtwrap js-btn01_txtwrap">
-              <div class="btn01__txtarea">
-                <span class="btn01__txt js-btn01_txt">TOPに戻る</span>
-              </div>
-              <div class="btn01__txtarea">
-                <span class="btn01__txt js-btn01_txt">TOPに戻る</span>
-              </div>
-            </div>
-          </div>
-          <span class="btn01__bg js-btn01_bg"></span>
+          <div class="btn01__txt">TOPに戻る</div>
         </a>
-        <span class="btn01__bar01 js-btn01_bar01"></span>
-        <span class="btn01__bar02 js-btn01_bar02"></span>
       </div>
     </div>
   </div>
