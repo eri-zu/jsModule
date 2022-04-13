@@ -57,6 +57,11 @@
       margin-top: 12.5px;
     }
   }
+
+  &.-radio,
+  &.-check {
+    // align-items: center;
+  }
 }
 
 .form__titlearea {
@@ -70,6 +75,11 @@
     text-align: left;
     padding-top: 0;
   }
+
+  &.-radio,
+  &.-check {
+    padding-top: 0;
+  }
 }
 
 .form__title {
@@ -81,6 +91,10 @@
     font-size: 14px;
   }
 }
+
+/* --------------------------------------------------------------------------------
+*   normal input
+-------------------------------------------------------------------------------- */
 
 .form__inputarea {
   flex-grow: 1;
@@ -100,25 +114,25 @@
   font-weight: 500;
   line-height: (30/18);
   width: 100%;
+}
 
-  input {
-    width: 100%;
-    height: 100%;
-    color: #003c0e;
+input.input_normal {
+  width: 100%;
+  height: 100%;
+  color: #003c0e;
 
-    &::placeholder {
-      color: rgba(0, 0, 0, 0.5);
-    }
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.5);
   }
+}
 
-  textarea {
-    width: 100%;
-    height: 100%;
-    color: #003c0e;
+textarea {
+  width: 100%;
+  height: 100%;
+  color: #003c0e;
 
-    &::placeholder {
-      color: rgba(0, 0, 0, 0.5);
-    }
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -136,35 +150,93 @@
   }
 }
 
-.form__checkbox {
-  margin-top: 45px;
-  text-align: center;
+/* --------------------------------------------------------------------------------
+*   radio 
+-------------------------------------------------------------------------------- */
+.form__radio-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-  label {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+.form__radio-item {
+  margin-right: 30px;
+  line-height: 1.875;
+}
+
+label.-radio {
+  font-size: 16px;
+  position: relative;
+  padding-left: 30px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
   }
 
-  input[type="checkbox"]:checked + label {
-    .form__checkbox-input::before {
-      display: block;
-    }
+  &::before {
+    display: block;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    border: 1px solid #003c0e;
+  }
+
+  &::after {
+    display: none;
+    width: 12px;
+    height: 12px;
+    left: 5px;
+    background: #003c0e;
   }
 }
 
-.form__checkbox-input {
-  width: 20px;
-  height: 20px;
-  background-color: #f6f6f6;
+input[type="radio"]:checked + label::after {
+  display: block;
+}
+
+/* --------------------------------------------------------------------------------
+*   checkbox
+-------------------------------------------------------------------------------- */
+
+.form__check-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form__check-item {
+  margin-right: 30px;
+  line-height: 1.875;
+}
+
+label.-check {
+  font-size: 16px;
   position: relative;
+  padding-left: 30px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+  }
 
   &::before {
-    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #f6f6f6;
+    transform: translateY(-50%);
+  }
+
+  &::after {
     display: none;
-    position: absolute;
-    top: 2px;
+    top: -1px;
     left: 6px;
     width: 6px;
     height: 11px;
@@ -175,16 +247,26 @@
   }
 }
 
-.form__checkbox-labelwrap {
-  display: inline-block;
+input[type="checkbox"]:checked + label::after {
+  display: block;
 }
 
-.form__checkbox-txt {
+/* --------------------------------------------------------------------------------
+*   privacy
+-------------------------------------------------------------------------------- */
+
+.form__privacyarea {
+  margin-top: 45px;
+  text-align: center;
+}
+
+.form__privacytxtwrap {
   color: #003c0e;
   font-size: 16px;
-  margin-left: 10px;
   line-height: 1;
   font-weight: 500;
+  position: relative;
+  display: inline-block;
 
   @include media-max("sp") {
     font-size: 14px;
@@ -195,6 +277,10 @@
     text-decoration: underline;
   }
 }
+
+/* --------------------------------------------------------------------------------
+*   error
+-------------------------------------------------------------------------------- */
 
 .form__errorarea {
   margin-top: 30px;
@@ -219,6 +305,10 @@
   padding-left: 18px;
   padding-top: 10px;
 }
+
+/* --------------------------------------------------------------------------------
+*   btn
+-------------------------------------------------------------------------------- */
 
 .form__btnarea {
   text-align: center;

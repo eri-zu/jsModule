@@ -14,27 +14,28 @@ export default class Controller extends Base {
     this.name = "Validation";
     this.isChecked = false;
 
-    this.$input = $(".js-form_input");
-    this.checkboxinput = document.querySelector(".js-form_checkbox_input");
-
-    this.errorArray = {};
-
-    this.$input.each((i, el) => {
-      this.errorArray[el.id] = "";
-    });
-
-    console.log(this.errorArray); // {name: '', furigana: '', company: '', title: '', email: '', …}
+    this.input = document.querySelectorAll(".js-form_input");
+    this.checkboxinput = document.querySelectorAll(".js-form_checkbox");
+    this.button = document.querySelector(".js-formbtn");
+    this.errorMessage = document.querySelector(".js-form_errormessage");
 
     this.setup();
     this.setEvents();
   }
 
-  setup() {}
+  setup() {
+    this.errorArray = {};
+
+    this.input.forEach((el, i) => {
+      this.errorArray[el.id] = "";
+    });
+
+    console.log(this.errorArray); // {name: '', furigana: '', company: '', title: '', email: '', …}
+  }
 
   check(target) {
     const isEmpty = !target.value;
     const parent = target.parentNode;
-
     let inputValue = target.value;
     const dataRegex = target.dataset.regex;
     const regexData = {
@@ -56,11 +57,9 @@ export default class Controller extends Base {
 
     if (isEmpty || invalidRegex) {
       this.errorArray[target.id] = "isError";
-      // if (!errorElm) this.createErrorMessage(parentEle);
       this.showError(parent);
     } else {
       delete this.errorArray[target.id];
-      // if (errorElm) errorElm.remove();
       this.hideError(parent);
     }
 
@@ -83,37 +82,43 @@ export default class Controller extends Base {
   }
 
   send(errorCount, alertCount) {
-    console.log("send");
-    console.log(errorCount, "errorCount");
-    console.log(alertCount, "alertCount");
-    // checkbox
-    console.log(this.isChecked, "this.isChecked");
+    // error message
+    alertCount > 0
+      ? this.errorMessage.classList.add("is-active")
+      : this.errorMessage.classList.remove("is-active");
 
     // button
-    const button = document.querySelector(".js-formbtn");
     errorCount == 0 && this.isChecked
-      ? button.classList.add("is-active")
-      : button.classList.remove("is-active");
-
-    // error message
-    const errorMessage = document.querySelector(".js-form_errormessage");
-    alertCount > 0
-      ? errorMessage.classList.add("is-active")
-      : errorMessage.classList.remove("is-active");
+      ? this.button.classList.add("is-active")
+      : this.button.classList.remove("is-active");
   }
 
   setEvents() {
     super.setEvents();
 
-    ["input", "change", "blur"].forEach((eventName, i) => {
-      this.$input.on(eventName + "." + this.name, (e) => {
+    this.input.forEach((el, i) => {
+      el.addEventListener("input", (e) => {
         this.check(e.target);
       });
     });
 
-    $(this.checkboxinput).on("click" + "." + this.name, (e) => {
-      this.isChecked = this.checkboxinput.checked ? true : false;
-      this.send(this.errorCount, this.alertCount);
+    this.input.forEach((el, i) => {
+      el.addEventListener("change", (e) => {
+        this.check(e.target);
+      });
+    });
+
+    this.input.forEach((el, i) => {
+      el.addEventListener("blur", (e) => {
+        this.check(e.target);
+      });
+    });
+
+    this.checkboxinput.forEach((el, i) => {
+      el.addEventListener("click", (e) => {
+        this.isChecked = this.checkboxinput.checked ? true : false;
+        this.send(this.errorCount, this.alertCount);
+      });
     });
   }
 }

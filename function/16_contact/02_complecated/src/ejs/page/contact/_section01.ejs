@@ -52,7 +52,48 @@
       id: "tel",
       dataRegex: "true"
     },
-  ]
+  ];
+
+  const radiodata = [
+    {
+      title: "企画・設計から",
+      value: "企画・設計",
+      id: "planning",
+    },
+    {
+      title: "デザインから",
+      value: "デザイン",
+      id: "design",
+    },
+    {
+      title: "コーディング・開発から",
+      value: "コーディング・開発",
+      id: "coding",
+    },
+  ];
+
+  const checkdata = [
+    {
+      title: "webサイト制作",
+      value: "website",
+      id: "website",
+    },
+    {
+      title: "機能・UI・ビジュアルの部分開発",
+      value: "function",
+      id: "function",
+    },
+    {
+      title: "プロダクト開発（webサービス、アプリ）",
+      value: "product",
+      id: "prodcut",
+    },
+    {
+      title: "ゲーム開発",
+      value: "game",
+      id: "game",
+    },
+  ];
 %>
 
 <div class="section01">
@@ -78,7 +119,7 @@
                 <div class="form__inputarea-inner">
                   <div class="form__inputarea-bg js-form_inputbg"></div>
                   <input
-                    class="js-form_input"
+                    class="js-form_input input_normal"
                     id="<%= data[i].id %>"
                     name="<%= data[i].id %>"
                     type="<%= data[i].type %>"
@@ -90,6 +131,56 @@
               </div>
             </li>
             <%}%>
+
+            <!-- radio -->
+            <li class="form__item -radio">
+              <div class="form__titlearea -radio">
+                <p class="form__title">相談フェーズ</p>
+              </div>
+              <div class="form__radioarea">
+                <ul class="form__radio-list">
+                  <% for (let i = 0; i < radiodata.length; i++) { %>
+                  <li class="form__radio-item">
+                    <input
+                      id="<%= radiodata[i].id %>"
+                      name="相談フェーズ"
+                      type="radio"
+                      value="<%= radiodata[i].value %>"
+                    />
+                    <label for="<%= radiodata[i].id %>" class="-radio"
+                      ><%= radiodata[i].title %></label
+                    >
+                  </li>
+                  <%}%>
+                </ul>
+              </div>
+            </li>
+
+            <!-- checkbox -->
+            <li class="form__item -check">
+              <div class="form__titlearea -check">
+                <p class="form__title">相談内容</p>
+              </div>
+              <div class="form__checkarea">
+                <ul class="form__check-list">
+                  <% for (let i = 0; i < checkdata.length; i++) { %>
+                  <li class="form__check-item">
+                    <input
+                      class="input -radio"
+                      id="<%= checkdata[i].id %>"
+                      name="相談内容"
+                      type="checkbox"
+                      value="<%= checkdata[i].value %>"
+                    />
+                    <label for="<%= checkdata[i].id %>" class="-check"
+                      ><%= checkdata[i].title %></label
+                    >
+                  </li>
+                  <%}%>
+                </ul>
+              </div>
+            </li>
+
             <!-- txtarea -->
             <li class="form__item">
               <div class="form__titlearea">
@@ -113,20 +204,20 @@
             </li>
           </ul>
 
-          <!-- checkbox -->
-          <div class="form__checkbox">
-            <div class="form__checkbox-labelwrap js-form_checkboxwrap">
+          <!-- privacy -->
+          <div class="form__privacyarea">
+            <div class="form__privacytxtwrap">
               <input
-                class="js-form_checkbox_input"
-                type="checkbox"
+                class="js-form_checkbox"
                 id="privacy"
+                name=""
+                type="checkbox"
+                value=""
               />
-              <label class="js-form_checkbox" for="privacy">
-                <div class="form__checkbox-input"></div>
-                <div class="form__checkbox-txt">
-                  <a href="#" class="hover_op">プライバシポリシー</a>に同意する
-                </div>
-              </label>
+              <label for="privacy" class="-check">
+                <a href="#" class="hover_op">プライバシポリシー</a
+                >に同意する</label
+              >
             </div>
           </div>
         </div>

@@ -85,7 +85,7 @@
                 <div class="form__inputarea-inner">
                   <div class="form__inputarea-bg js-form_inputbg"></div>
                   <input
-                    class="js-form_input"
+                    class="js-form_input input_normal"
                     id="name"
                     name="name"
                     type="text"
@@ -105,7 +105,7 @@
                 <div class="form__inputarea-inner">
                   <div class="form__inputarea-bg js-form_inputbg"></div>
                   <input
-                    class="js-form_input"
+                    class="js-form_input input_normal"
                     id="furigana"
                     name="furigana"
                     type="text"
@@ -125,7 +125,7 @@
                 <div class="form__inputarea-inner">
                   <div class="form__inputarea-bg js-form_inputbg"></div>
                   <input
-                    class="js-form_input"
+                    class="js-form_input input_normal"
                     id="company"
                     name="company"
                     type="text"
@@ -145,7 +145,7 @@
                 <div class="form__inputarea-inner">
                   <div class="form__inputarea-bg js-form_inputbg"></div>
                   <input
-                    class="js-form_input"
+                    class="js-form_input input_normal"
                     id="title"
                     name="title"
                     type="text"
@@ -165,7 +165,7 @@
                 <div class="form__inputarea-inner">
                   <div class="form__inputarea-bg js-form_inputbg"></div>
                   <input
-                    class="js-form_input"
+                    class="js-form_input input_normal"
                     id="email"
                     name="email"
                     type="email"
@@ -185,7 +185,7 @@
                 <div class="form__inputarea-inner">
                   <div class="form__inputarea-bg js-form_inputbg"></div>
                   <input
-                    class="js-form_input"
+                    class="js-form_input input_normal"
                     id="tel"
                     name="tel"
                     type="tel"
@@ -197,6 +197,119 @@
               </div>
             </li>
             
+
+            <!-- radio -->
+            <li class="form__item -radio">
+              <div class="form__titlearea -radio">
+                <p class="form__title">相談フェーズ</p>
+              </div>
+              <div class="form__radioarea">
+                <ul class="form__radio-list">
+                  
+                  <li class="form__radio-item">
+                    <input
+                      id="planning"
+                      name="相談フェーズ"
+                      type="radio"
+                      value="企画・設計"
+                    />
+                    <label for="planning" class="-radio"
+                      >企画・設計から</label
+                    >
+                  </li>
+                  
+                  <li class="form__radio-item">
+                    <input
+                      id="design"
+                      name="相談フェーズ"
+                      type="radio"
+                      value="デザイン"
+                    />
+                    <label for="design" class="-radio"
+                      >デザインから</label
+                    >
+                  </li>
+                  
+                  <li class="form__radio-item">
+                    <input
+                      id="coding"
+                      name="相談フェーズ"
+                      type="radio"
+                      value="コーディング・開発"
+                    />
+                    <label for="coding" class="-radio"
+                      >コーディング・開発から</label
+                    >
+                  </li>
+                  
+                </ul>
+              </div>
+            </li>
+
+            <!-- checkbox -->
+            <li class="form__item -check">
+              <div class="form__titlearea -check">
+                <p class="form__title">相談内容</p>
+              </div>
+              <div class="form__checkarea">
+                <ul class="form__check-list">
+                  
+                  <li class="form__check-item">
+                    <input
+                      class="input -radio"
+                      id="website"
+                      name="相談内容"
+                      type="checkbox"
+                      value="website"
+                    />
+                    <label for="website" class="-check"
+                      >webサイト制作</label
+                    >
+                  </li>
+                  
+                  <li class="form__check-item">
+                    <input
+                      class="input -radio"
+                      id="function"
+                      name="相談内容"
+                      type="checkbox"
+                      value="function"
+                    />
+                    <label for="function" class="-check"
+                      >機能・UI・ビジュアルの部分開発</label
+                    >
+                  </li>
+                  
+                  <li class="form__check-item">
+                    <input
+                      class="input -radio"
+                      id="prodcut"
+                      name="相談内容"
+                      type="checkbox"
+                      value="product"
+                    />
+                    <label for="prodcut" class="-check"
+                      >プロダクト開発（webサービス、アプリ）</label
+                    >
+                  </li>
+                  
+                  <li class="form__check-item">
+                    <input
+                      class="input -radio"
+                      id="game"
+                      name="相談内容"
+                      type="checkbox"
+                      value="game"
+                    />
+                    <label for="game" class="-check"
+                      >ゲーム開発</label
+                    >
+                  </li>
+                  
+                </ul>
+              </div>
+            </li>
+
             <!-- txtarea -->
             <li class="form__item">
               <div class="form__titlearea">
@@ -220,20 +333,20 @@
             </li>
           </ul>
 
-          <!-- checkbox -->
-          <div class="form__checkbox">
-            <div class="form__checkbox-labelwrap js-form_checkboxwrap">
+          <!-- privacy -->
+          <div class="form__privacyarea">
+            <div class="form__privacytxtwrap">
               <input
-                class="js-form_checkbox_input"
-                type="checkbox"
+                class="js-form_checkbox"
                 id="privacy"
+                name=""
+                type="checkbox"
+                value=""
               />
-              <label class="js-form_checkbox" for="privacy">
-                <div class="form__checkbox-input"></div>
-                <div class="form__checkbox-txt">
-                  <a href="#" class="hover_op">プライバシポリシー</a>に同意する
-                </div>
-              </label>
+              <label for="privacy" class="-check">
+                <a href="#" class="hover_op">プライバシポリシー</a
+                >に同意する</label
+              >
             </div>
           </div>
         </div>

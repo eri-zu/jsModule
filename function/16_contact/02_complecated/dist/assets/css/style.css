@@ -1246,6 +1246,24 @@ a:active {
   /* --------------------------------------------------------------------------------
 *   form
 -------------------------------------------------------------------------------- */
+  /* --------------------------------------------------------------------------------
+*   normal input
+-------------------------------------------------------------------------------- */
+  /* --------------------------------------------------------------------------------
+*   radio 
+-------------------------------------------------------------------------------- */
+  /* --------------------------------------------------------------------------------
+*   checkbox
+-------------------------------------------------------------------------------- */
+  /* --------------------------------------------------------------------------------
+*   privacy
+-------------------------------------------------------------------------------- */
+  /* --------------------------------------------------------------------------------
+*   error
+-------------------------------------------------------------------------------- */
+  /* --------------------------------------------------------------------------------
+*   btn
+-------------------------------------------------------------------------------- */
 }
 
 #wrapper.id_contact .form__item-inputedarea,
@@ -1421,6 +1439,14 @@ a:active {
   }
 }
 
+#wrapper.id_contact .form__titlearea.-radio, #wrapper.id_contact .form__titlearea.-check,
+#wrapper.id_contact_confirm .form__titlearea.-radio,
+#wrapper.id_contact_confirm .form__titlearea.-check,
+#wrapper.id_done .form__titlearea.-radio,
+#wrapper.id_done .form__titlearea.-check {
+  padding-top: 0;
+}
+
 #wrapper.id_contact .form__title,
 #wrapper.id_contact_confirm .form__title,
 #wrapper.id_done .form__title {
@@ -1465,31 +1491,31 @@ a:active {
   width: 100%;
 }
 
-#wrapper.id_contact .form__inputarea-inner input,
-#wrapper.id_contact_confirm .form__inputarea-inner input,
-#wrapper.id_done .form__inputarea-inner input {
+#wrapper.id_contact input.input_normal,
+#wrapper.id_contact_confirm input.input_normal,
+#wrapper.id_done input.input_normal {
   width: 100%;
   height: 100%;
   color: #003c0e;
 }
 
-#wrapper.id_contact .form__inputarea-inner input::placeholder,
-#wrapper.id_contact_confirm .form__inputarea-inner input::placeholder,
-#wrapper.id_done .form__inputarea-inner input::placeholder {
+#wrapper.id_contact input.input_normal::placeholder,
+#wrapper.id_contact_confirm input.input_normal::placeholder,
+#wrapper.id_done input.input_normal::placeholder {
   color: rgba(0, 0, 0, 0.5);
 }
 
-#wrapper.id_contact .form__inputarea-inner textarea,
-#wrapper.id_contact_confirm .form__inputarea-inner textarea,
-#wrapper.id_done .form__inputarea-inner textarea {
+#wrapper.id_contact textarea,
+#wrapper.id_contact_confirm textarea,
+#wrapper.id_done textarea {
   width: 100%;
   height: 100%;
   color: #003c0e;
 }
 
-#wrapper.id_contact .form__inputarea-inner textarea::placeholder,
-#wrapper.id_contact_confirm .form__inputarea-inner textarea::placeholder,
-#wrapper.id_done .form__inputarea-inner textarea::placeholder {
+#wrapper.id_contact textarea::placeholder,
+#wrapper.id_contact_confirm textarea::placeholder,
+#wrapper.id_done textarea::placeholder {
   color: rgba(0, 0, 0, 0.5);
 }
 
@@ -1511,44 +1537,115 @@ a:active {
   background-color: #ff9797;
 }
 
-#wrapper.id_contact .form__checkbox,
-#wrapper.id_contact_confirm .form__checkbox,
-#wrapper.id_done .form__checkbox {
-  margin-top: 45px;
-  text-align: center;
-}
-
-#wrapper.id_contact .form__checkbox label,
-#wrapper.id_contact_confirm .form__checkbox label,
-#wrapper.id_done .form__checkbox label {
-  display: inline-flex;
-  justify-content: center;
+#wrapper.id_contact .form__radio-list,
+#wrapper.id_contact_confirm .form__radio-list,
+#wrapper.id_done .form__radio-list {
+  display: flex;
   align-items: center;
-  position: relative;
+  flex-wrap: wrap;
 }
 
-#wrapper.id_contact .form__checkbox input[type="checkbox"]:checked + label .form__checkbox-input::before,
-#wrapper.id_contact_confirm .form__checkbox input[type="checkbox"]:checked + label .form__checkbox-input::before,
-#wrapper.id_done .form__checkbox input[type="checkbox"]:checked + label .form__checkbox-input::before {
+#wrapper.id_contact .form__radio-item,
+#wrapper.id_contact_confirm .form__radio-item,
+#wrapper.id_done .form__radio-item {
+  margin-right: 30px;
+  line-height: 1.875;
+}
+
+#wrapper.id_contact label.-radio,
+#wrapper.id_contact_confirm label.-radio,
+#wrapper.id_done label.-radio {
+  font-size: 16px;
+  position: relative;
+  padding-left: 30px;
+}
+
+#wrapper.id_contact label.-radio::before, #wrapper.id_contact label.-radio::after,
+#wrapper.id_contact_confirm label.-radio::before,
+#wrapper.id_contact_confirm label.-radio::after,
+#wrapper.id_done label.-radio::before,
+#wrapper.id_done label.-radio::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+
+#wrapper.id_contact label.-radio::before,
+#wrapper.id_contact_confirm label.-radio::before,
+#wrapper.id_done label.-radio::before {
+  display: block;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  border: 1px solid #003c0e;
+}
+
+#wrapper.id_contact label.-radio::after,
+#wrapper.id_contact_confirm label.-radio::after,
+#wrapper.id_done label.-radio::after {
+  display: none;
+  width: 12px;
+  height: 12px;
+  left: 5px;
+  background: #003c0e;
+}
+
+#wrapper.id_contact input[type="radio"]:checked + label::after,
+#wrapper.id_contact_confirm input[type="radio"]:checked + label::after,
+#wrapper.id_done input[type="radio"]:checked + label::after {
   display: block;
 }
 
-#wrapper.id_contact .form__checkbox-input,
-#wrapper.id_contact_confirm .form__checkbox-input,
-#wrapper.id_done .form__checkbox-input {
+#wrapper.id_contact .form__check-list,
+#wrapper.id_contact_confirm .form__check-list,
+#wrapper.id_done .form__check-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#wrapper.id_contact .form__check-item,
+#wrapper.id_contact_confirm .form__check-item,
+#wrapper.id_done .form__check-item {
+  margin-right: 30px;
+  line-height: 1.875;
+}
+
+#wrapper.id_contact label.-check,
+#wrapper.id_contact_confirm label.-check,
+#wrapper.id_done label.-check {
+  font-size: 16px;
+  position: relative;
+  padding-left: 30px;
+}
+
+#wrapper.id_contact label.-check::before, #wrapper.id_contact label.-check::after,
+#wrapper.id_contact_confirm label.-check::before,
+#wrapper.id_contact_confirm label.-check::after,
+#wrapper.id_done label.-check::before,
+#wrapper.id_done label.-check::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+}
+
+#wrapper.id_contact label.-check::before,
+#wrapper.id_contact_confirm label.-check::before,
+#wrapper.id_done label.-check::before {
+  display: block;
   width: 20px;
   height: 20px;
   background-color: #f6f6f6;
-  position: relative;
+  transform: translateY(-50%);
 }
 
-#wrapper.id_contact .form__checkbox-input::before,
-#wrapper.id_contact_confirm .form__checkbox-input::before,
-#wrapper.id_done .form__checkbox-input::before {
-  content: "";
+#wrapper.id_contact label.-check::after,
+#wrapper.id_contact_confirm label.-check::after,
+#wrapper.id_done label.-check::after {
   display: none;
-  position: absolute;
-  top: 2px;
+  top: -1px;
   left: 6px;
   width: 6px;
   height: 11px;
@@ -1558,33 +1655,41 @@ a:active {
   border-right: 3px solid #003c0e;
 }
 
-#wrapper.id_contact .form__checkbox-labelwrap,
-#wrapper.id_contact_confirm .form__checkbox-labelwrap,
-#wrapper.id_done .form__checkbox-labelwrap {
+#wrapper.id_contact input[type="checkbox"]:checked + label::after,
+#wrapper.id_contact_confirm input[type="checkbox"]:checked + label::after,
+#wrapper.id_done input[type="checkbox"]:checked + label::after {
+  display: block;
+}
+
+#wrapper.id_contact .form__privacyarea,
+#wrapper.id_contact_confirm .form__privacyarea,
+#wrapper.id_done .form__privacyarea {
+  margin-top: 45px;
+  text-align: center;
+}
+
+#wrapper.id_contact .form__privacytxtwrap,
+#wrapper.id_contact_confirm .form__privacytxtwrap,
+#wrapper.id_done .form__privacytxtwrap {
+  color: #003c0e;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+  position: relative;
   display: inline-block;
 }
 
-#wrapper.id_contact .form__checkbox-txt,
-#wrapper.id_contact_confirm .form__checkbox-txt,
-#wrapper.id_done .form__checkbox-txt {
-  color: #003c0e;
-  font-size: 16px;
-  margin-left: 10px;
-  line-height: 1;
-  font-weight: 500;
-}
-
 @media only screen and (max-width: 768px) {
-  #wrapper.id_contact .form__checkbox-txt,
-  #wrapper.id_contact_confirm .form__checkbox-txt,
-  #wrapper.id_done .form__checkbox-txt {
+  #wrapper.id_contact .form__privacytxtwrap,
+  #wrapper.id_contact_confirm .form__privacytxtwrap,
+  #wrapper.id_done .form__privacytxtwrap {
     font-size: 14px;
   }
 }
 
-#wrapper.id_contact .form__checkbox-txt a,
-#wrapper.id_contact_confirm .form__checkbox-txt a,
-#wrapper.id_done .form__checkbox-txt a {
+#wrapper.id_contact .form__privacytxtwrap a,
+#wrapper.id_contact_confirm .form__privacytxtwrap a,
+#wrapper.id_done .form__privacytxtwrap a {
   color: #003c0e;
   text-decoration: underline;
 }
