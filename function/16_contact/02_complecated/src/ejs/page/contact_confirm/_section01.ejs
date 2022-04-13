@@ -1,0 +1,82 @@
+<!-- ************************************************************
+//  section01
+// ************************************************************ -->
+<!-- prettier-ignore -->
+<%  
+  const data = [
+    {
+      id: "name",
+      title: "氏名*",
+      txt: "山田 太郎",
+    },
+    {
+      id: "furigana",
+      title: "フリガナ*",
+      txt: "ヤマダ タロウ",
+    },
+    {
+      id: "company",
+      title: "会社名*",
+      txt: "株式会社○○○○○",
+    },
+    {
+      id: "title",
+      title: "役職*",
+      txt: "代表取締役",
+    },
+    {
+      id: "email",
+      title: "メールアドレス*",
+      txt: "sample@gmail.com",
+    },
+    {
+      id: "tel",
+      title: "電話番号*",
+      txt: "00000000",
+    },
+    {
+      id: "contents",
+      title: "お問い合わせ内容*",
+      txt: "お問い合わせ内容はいります。お問い合わせ内容はいります。お問い合わせ内容はいります。お問い合わせ内容はいります。お問い合わせ内容はいります。お問い合わせ内容はいります。お問い合わせ内容はいります。お問い合わせ内容はいります。お問い合わせ内容はいります。お問い合わせ内容はいります。お問い合わせ内容はいります。お問い合わせ内容はいります。お問い合わせ内容はいります。お問い合わせ内容はいります。",
+    },
+  ]
+%>
+
+<div class="section01">
+  <div class="section01__inner">
+    <!-- title -->
+    <div class="section01__titlewrap">
+      <p class="section01__title">お問い合わせ内容確認</p>
+    </div>
+
+    <div class="section01__form">
+      <form action="" class="">
+        <!-- contents -->
+        <div class="form__contents">
+          <ul class="form__list">
+            <% for (let i = 0; i < data.length; i++) { %>
+            <li class="form__item">
+              <div class="form__titlearea">
+                <p class="form__title"><%= data[i].title %></p>
+              </div>
+              <div class="form__item-inputedarea -<%=data[i].id %>">
+                <p class="form__item-inputedarea-txt"><%= data[i].txt %></p>
+              </div>
+            </li>
+            <%}%>
+          </ul>
+        </div>
+
+        <!-- btnarea -->
+        <div class="form__btnarea">
+          <div class="form__btnwrap is-active">
+            <div class="btn01">
+              <input type="submit" />
+              <div class="btn01__txt">送信する</div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
