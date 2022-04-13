@@ -475,19 +475,12 @@ textarea {
   outline: none;
 }
 
-@keyframes onAutoFillStart {
-  from {
-  }
-  to {
-  }
-}
-
 input:-webkit-autofill,
 button:-webkit-autofill,
 select:-webkit-autofill,
 textarea:-webkit-autofill {
-  animation-name: onAutoFillStart;
   transition: background-color 50000s ease-in-out 0s;
+  -webkit-text-fill-color: #003c0e;
 }
 
 textarea {

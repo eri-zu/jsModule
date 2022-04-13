@@ -72,19 +72,20 @@ textarea {
   font: inherit;
   outline: none;
 
-  @keyframes onAutoFillStart {
-    from {
-    }
-    to {
-    }
-  }
+  // @keyframes onAutoFillStart {
+  //   from {
+  //   }
+  //   to {
+  //   }
+  // }
 
   &:-webkit-autofill {
-    // box-shadow: 0 0 0 1000px #fff inset;
-    // box-shadow: 0 0 0 1000px rgb(255, 255, 255) inset;
-    // background-color: #fff;
-    animation-name: onAutoFillStart;
+    // オートフィルの背景消す
+    // animation-name: onAutoFillStart;
     transition: background-color 50000s ease-in-out 0s;
+
+    // オートフィル時のカラー
+    -webkit-text-fill-color: #003c0e;
   }
 }
 
@@ -110,5 +111,4 @@ select::-ms-expand {
 }
 *::selection {
   background-color: transparent;
-  // color: transparent;
 }

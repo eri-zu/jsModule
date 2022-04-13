@@ -15,7 +15,6 @@ export default class Controller extends Base {
     this.isChecked = false;
 
     this.$input = $(".js-form_input");
-    this.$checkbox = $(".js-form_checkboxwrap");
     this.checkboxinput = document.querySelector(".js-form_checkbox_input");
 
     this.errorArray = {};
@@ -34,10 +33,7 @@ export default class Controller extends Base {
 
   check(target) {
     const isEmpty = !target.value;
-    // const parentEle = target.parentNode.parentNode;
     const parent = target.parentNode;
-    // this.errorCount = Object.keys(this.errorArray).length;
-    // const errorElm = parentEle.querySelector(".error-msg");
 
     let inputValue = target.value;
     const dataRegex = target.dataset.regex;
@@ -85,17 +81,6 @@ export default class Controller extends Base {
     const bg = parent.querySelector(".js-form_inputbg");
     bg.classList.remove("is-error");
   }
-
-  // createErrorMessage(parentEle) {
-  //   // messegeの要素作る
-  //   // <div class="error-msg>正しく入力してください。</div>"
-  //   const errorMsgEle = document.createElement("div");
-  //   errorMsgEle.className = `error-msg`;
-  //   errorMsgEle.innerHTML = "正しく入力してください。";
-
-  //   // 親要素に入れる
-  //   parentEle.appendChild(errorMsgEle);
-  // }
 
   send(errorCount, alertCount) {
     console.log("send");
