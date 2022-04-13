@@ -15,9 +15,14 @@ export default class Controller extends Base {
     this.isChecked = false;
 
     this.input = document.querySelectorAll(".js-form_input");
-    this.checkboxinput = document.querySelectorAll(".js-form_checkbox");
+    // this.checkboxinput = document.querySelectorAll(".js-form_checkbox");
+    this.checkboxinput = document.querySelector(".js-form_checkbox");
     this.button = document.querySelector(".js-formbtn");
     this.errorMessage = document.querySelector(".js-form_errormessage");
+
+    console.log(this.input);
+    console.log(this.checkboxinput);
+    console.log(this.button);
 
     this.setup();
     this.setEvents();
@@ -27,6 +32,7 @@ export default class Controller extends Base {
     this.errorArray = {};
 
     this.input.forEach((el, i) => {
+      console.log(el);
       this.errorArray[el.id] = "";
     });
 
@@ -82,15 +88,18 @@ export default class Controller extends Base {
   }
 
   send(errorCount, alertCount) {
-    // error message
-    alertCount > 0
-      ? this.errorMessage.classList.add("is-active")
-      : this.errorMessage.classList.remove("is-active");
-
+    console.log(errorCount);
+    console.log(alertCount);
+    console.log(this.isChecked);
     // button
     errorCount == 0 && this.isChecked
       ? this.button.classList.add("is-active")
       : this.button.classList.remove("is-active");
+
+    // error message
+    alertCount > 0
+      ? this.errorMessage.classList.add("is-active")
+      : this.errorMessage.classList.remove("is-active");
   }
 
   setEvents() {
@@ -114,11 +123,16 @@ export default class Controller extends Base {
       });
     });
 
-    this.checkboxinput.forEach((el, i) => {
-      el.addEventListener("click", (e) => {
-        this.isChecked = this.checkboxinput.checked ? true : false;
-        this.send(this.errorCount, this.alertCount);
-      });
+    // this.checkboxinput.forEach((el, i) => {
+    //   el.addEventListener("click", (e) => {
+    //     this.isChecked = this.checkboxinput.checked ? true : false;
+    //     this.send(this.errorCount, this.alertCount);
+    //   });
+    // });
+
+    this.checkboxinput.addEventListener("click", (e) => {
+      this.isChecked = this.checkboxinput.checked ? true : false;
+      this.send(this.errorCount, this.alertCount);
     });
   }
 }
