@@ -22,7 +22,7 @@ export default class Order extends Base {
 
   setup() {}
 
-  right() {
+  go() {
     this.current++;
 
     // 端で止める
@@ -43,7 +43,7 @@ export default class Order extends Base {
     }
   }
 
-  left() {
+  back() {
     this.current--;
 
     // 端で止める

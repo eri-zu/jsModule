@@ -1162,6 +1162,7 @@ a:active {
 #wrapper.id_top .slider__list {
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 #wrapper.id_top .slider__list-inner {

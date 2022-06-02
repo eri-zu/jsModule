@@ -58,6 +58,8 @@ export default class Renderer extends Base {
       value: this.totalnum,
       ease: "expo.out",
     });
+
+    return tl;
   }
 
   update() {
@@ -65,9 +67,11 @@ export default class Renderer extends Base {
 
     if (x < -this.maxmove) {
       // nextのreset
+      console.log("aaaa");
       x = x + this.maxmove;
     } else if (x > this.maxmove) {
       // prevのreset
+      console.log("bbb");
       x = x - this.maxmove;
     }
 
@@ -120,21 +124,23 @@ export default class Renderer extends Base {
     });
   }
 
-  onEnterArrow(target, direction) {
-    // const x = direction == "right" ? 10 : -10;
-    // const tl = gsap.timeline();
-    // tl.to(target, 1, {
-    //   x: x,
-    //   ease: "expo.out",
-    // });
+  onEnterArrow(dom, direction) {
+    const x = direction == "right" ? 10 : -10;
+
+    const tl = gsap.timeline();
+    tl.to(dom, 1, {
+      x: x,
+      ease: "expo.out",
+    });
   }
 
-  onLeaveArrow(target) {
-    // const tl = gsap.timeline();
-    // tl.to(target, 1, {
-    //   x: 0,
-    //   ease: "expo.out",
-    // });
+  onLeaveArrow(dom) {
+    const tl = gsap.timeline();
+
+    tl.to(dom, 1, {
+      x: 0,
+      ease: "expo.out",
+    });
   }
 
   onResize() {}
