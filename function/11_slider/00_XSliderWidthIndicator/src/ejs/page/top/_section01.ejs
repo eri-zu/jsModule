@@ -1,0 +1,48 @@
+<!-- ************************************************************
+//  section01
+// ************************************************************ -->
+<!-- prettier-ignore -->
+<div class="section section01">
+  <div class="slider js-slider">
+    <div class="slider__inner">
+      <div class="slider__list">
+        <div class="slider__list-inner js-slider__inenr">
+          <li class="slider__item js-slider_item">
+            <p class="slider__img">
+              <img src="./assets/resource/img/2.jpg" alt="" />
+            </p>
+          </li>
+          <li class="slider__item js-slider_item">
+            <p class="slider__img">
+              <img src="./assets/resource/img/3.jpg" alt="" />
+            </p>
+          </li>
+          <% for(let i = 0; i < 3;i ++) { %>
+          <li class="slider__item js-slider_item">
+            <p class="slider__img">
+              <img src="./assets/resource/img/<%= i + 1%>.jpg" alt="" />
+            </p>
+          </li>
+          <% } %>         
+        </div>
+        <div class="slider__arrow -left">
+          <div class="svgwrap js-slider_arrow_left">
+            <%-include('../../../../dist/assets/resource/img/arrow_left.svg')%>
+          </div>
+        </div>
+        <div class="slider__arrow -right">
+          <div class="svgwrap js-slider_arrow_right">
+            <%-include('../../../../dist/assets/resource/img/arrow_right.svg')%>
+          </div>
+        </div>
+      </div>
+      <div class="slider__indicator js-slider_indicator">
+        <ul class="slider__indicator-list js-slider_indicator_wrap">
+          <% for(let i = 0; i < 3;i ++) { const className = i == 0 ? "is-active" : null; %>
+          <li class="slider__indicator-item js-slider_indicator_item <%= className %>"></li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
