@@ -1,0 +1,26 @@
+<!-- ************************************************************
+//  section01
+// ************************************************************ -->
+<div class="section section01">
+  <div class="slider">
+    <div class="slider__inner js-slider__inner">
+      <ul class="slider__list">
+        <% for(let i = 0; i < 4; i ++) { %>
+        <li class="slider__item js-slider_item" id="<%= i + 1 %>">
+          <div class="slider__img">
+            <img src="./assets/resource/img/<%= i + 1 %>.jpg" alt="" />
+          </div>
+          <div class="slider__txt"><%= i + 1 %></div>
+        </li>
+        <% } %> <% for(let i = 0; i < 4; i ++) { %>
+        <li class="slider__item js-slider_item" id="<%= i + 1 %>">
+          <div class="slider__img">
+            <img src="./assets/resource/img/<%= i + 1 %>.jpg" alt="" />
+          </div>
+          <div class="slider__txt"><%= i + 1 %></div>
+        </li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</div>

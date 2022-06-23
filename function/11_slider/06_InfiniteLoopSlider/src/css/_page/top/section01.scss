@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+/* --------------------------------------------------------------------------------
+*
+*   section01
+*
+-------------------------------------------------------------------------------- */
+$width: 400;
+$marginRight: 30;
+
+.slider {
+  margin-left: -100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.slider__list {
+  position: relative;
+  display: flex;
+}
+
+.slider__item {
+  margin-right: 30px;
+  position: relative;
+  width: vw(265, 1024);
+  min-width: 265px;
+  min-width: vw(265, 1024);
+
+  img {
+    width: 100%;
+  }
+}
+
+.slider__txt {
+  text-align: center;
+  font-size: 20px;
+}
